@@ -1,6 +1,6 @@
 --Total Premium
 SELECT --count(0) 
-info.productcode, info.policyno, info.certificateno, info.customercode, info.customerstatus, prem.totpremium
+info.productcode, info.policyno, info.certificateno, info.customercode, info.customerstatus, prem.totpremium, info.sa, prem.*
 FROM tlp.splitpremiumamount prem  
 join tlp.customerinfo info 
 	on prem.grouppolicyno = info.policyno 
@@ -9,6 +9,9 @@ join tlp.customerinfo info
 where prem.totpremium = '0.00' and customerstatus in (select customerstatus from lookup.tlppolicystatus)
 order by info.productcode, info.policyno, info.certificateno, info.customercode, info.customerstatus, prem.totpremium
 ;
+
+select * from tlp.customersa 
+where customercode = '02900800210000009707';
 
 --Life Premium
 SELECT --count(0) 

@@ -35,7 +35,7 @@ join (select * from lookup.smi where coverage = 'TPD') b
 	on trim (prem.grouppolicyno) = trim (b.tlpplancode)
 	and trim (info.policyno) = trim (b.tlpplancode)
 where prem.tpdpremium = '0.00' 
---and info.policyno not in ('00019004', '00019005', '00019006')
+and info.policyno not in ('00019004', '00019005', '00019006')
 and customerstatus in (select customerstatus from lookup.tlppolicystatus)
 order by info.productcode, info.policyno, info.certificateno, info.customercode, info.customerstatus, prem.tpdpremium
 ;

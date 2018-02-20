@@ -49,7 +49,7 @@ inner join (select * from lookup.smi where coverage = 'TD') b
 	and trim(info.policyno) = trim (b.tlpplancode) 
 where 1=1 
 and info.customerstatus in (select customerstatus from lookup.tlppolicystatus) 
-and abs(ceiling ((to_number(info.sa, '99999999999.99') * (b.benefit/100)) / (to_number(info.durationinsurance, '99') * 12 )) - to_number(a.sa_td, '99999999999.99')) <> 1
+--and abs(ceiling ((to_number(info.sa, '99999999999.99') * (b.benefit/100)) / (to_number(info.durationinsurance, '99') * 12 )) - to_number(a.sa_td, '99999999999.99')) <> 1
 and to_number(a.sa_td, '99999999999.99') <> ceiling ((to_number(info.sa, '99999999999.99') * (b.benefit/100)) / (to_number(info.durationinsurance, '99') * 12 )) ;
 
 --Validate Rider ADD-ML46

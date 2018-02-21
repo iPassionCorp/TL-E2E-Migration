@@ -1629,6 +1629,59 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE OR REPLACE VIEW lookup.rate AS
+ SELECT x.type,
+    x.rate,
+    x.age,
+    x.sex,
+    to_number(x.term, '99'::text) AS term,
+    to_number(x.premrate, '00000.00'::text) / 100::numeric AS premrate,
+    to_number(y.tpdrate, '00000.00'::text) / 100::numeric AS tpdrate,
+    to_number(x.premrate, '00000.00'::text) / 100::numeric + to_number(y.tpdrate, '00000.00'::text) / 100::numeric AS totrate
+   FROM dm.premrate x
+     JOIN dm.tpdrate y ON x.type = y.type AND x.rate = y.rate AND x.age = y.age AND x.sex = y.sex AND x.term = y.term;
+
+CREATE OR REPLACE VIEW lookup.rate_le49 AS
+ SELECT x.type,
+    x.rate,
+    x.age,
+    x.sex,
+    to_number(x.term, '99'::text) AS term,
+    to_number(x.premrate, '00000.00'::text) / 100::numeric AS premrate,
+    to_number(y.tpdrate, '00000.00'::text) / 100::numeric AS tpdrate,
+    to_number(x.premrate, '00000.00'::text) / 100::numeric + to_number(y.tpdrate, '00000.00'::text) / 100::numeric AS totrate
+   FROM dm.premrate x
+     JOIN dm.tpdrate y ON x.type = y.type AND x.rate = y.rate AND x.age = y.age AND x.sex = y.sex AND x.term = y.term
+  WHERE x.type = 'X'::text AND x.rate = 'A1'::text;
+
+CREATE OR REPLACE VIEW lookup.rate_le50 AS
+ SELECT x.type,
+    x.rate,
+    x.age,
+    x.sex,
+    to_number(x.term, '99'::text) AS term,
+    to_number(x.premrate, '00000.00'::text) / 100::numeric AS premrate,
+    to_number(y.tpdrate, '00000.00'::text) / 100::numeric AS tpdrate,
+    to_number(x.premrate, '00000.00'::text) / 100::numeric + to_number(y.tpdrate, '00000.00'::text) / 100::numeric AS totrate
+   FROM dm.premrate x
+     JOIN dm.tpdrate y ON x.type = y.type AND x.rate = y.rate AND x.age = y.age AND x.sex = y.sex AND x.term = y.term
+  WHERE x.type = 'X'::text AND x.rate = 'A1'::text;
+
+CREATE OR REPLACE VIEW lookup.rate_le51 AS
+ SELECT x.type,
+    x.rate,
+    x.age,
+    x.sex,
+    to_number(x.term, '99'::text) AS term,
+    to_number(x.premrate, '00000.00'::text) / 100::numeric AS premrate,
+    to_number(y.tpdrate, '00000.00'::text) / 100::numeric AS tpdrate,
+    to_number(x.premrate, '00000.00'::text) / 100::numeric + to_number(y.tpdrate, '00000.00'::text) / 100::numeric AS totrate
+   FROM dm.premrate x
+     JOIN dm.tpdrate y ON x.type = y.type AND x.rate = y.rate AND x.age = y.age AND x.sex = y.sex AND x.term = y.term
+  WHERE x.type = 'X'::text AND x.rate = 'A2'::text;
+
+
+
 CREATE OR REPLACE VIEW validate.numberofrecords AS
  SELECT sourcetmp.policyno,
     target.tlipolicy,

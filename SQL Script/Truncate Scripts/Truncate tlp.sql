@@ -1,0 +1,12 @@
+truncate table tlp.claimpayment;
+truncate table tlp.claimpaymentdetail;
+truncate table tlp.claimregisterdetail;
+truncate table tlp.claimregisterheader;
+truncate table tlp.customerballoon;
+truncate table tlp.customerinfo;
+truncate table tlp.customersa;
+truncate table tlp.masproduct;
+truncate table tlp.masproductcoverage;
+truncate table tlp.masproductcoverageclaim;
+truncate table tlp.payment;
+truncate table tlp.splitpremiumamount;

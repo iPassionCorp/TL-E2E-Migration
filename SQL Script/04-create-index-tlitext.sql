@@ -1,3 +1,5 @@
+SET search_path TO tlitext;
+
 CREATE INDEX IF NOT EXISTS indx_cert_01 ON cert (policyno, certno);
 CREATE INDEX IF NOT EXISTS indx_cert_02 ON cert (policyno);
 CREATE INDEX IF NOT EXISTS indx_cert_03 ON cert (certno);

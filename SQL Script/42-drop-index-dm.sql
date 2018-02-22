@@ -1,3 +1,5 @@
+SET search_path TO dm;
+
 DROP INDEX IF EXISTS indx_cert_01 CASCADE;
 DROP INDEX IF EXISTS indx_cert_02 CASCADE;
 DROP INDEX IF EXISTS indx_cert_03 CASCADE;

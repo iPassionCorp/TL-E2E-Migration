@@ -6,7 +6,7 @@ select count(0) AS policy from tlitext.policy;
 select count(0) AS cert from tlitext.cert;
 select count(0) AS detcert from tlitext.detcert;
 select count(0) AS certrider from tlitext.certrider;
-select count(0) AS certlinkerfrom tlitext.certlinker;
+select count(0) AS certlinker from tlitext.certlinker;
 select count(0) AS certmapping from tlitext.certmapping;
 select count(0) AS mgclaim from tlitext.mgclaim;
 select count(0) AS mgorder from tlitext.mgorder;

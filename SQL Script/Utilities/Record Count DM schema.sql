@@ -6,7 +6,7 @@ select count(0) AS policy from dm.policy;
 select count(0) AS cert from dm.cert;
 select count(0) AS detcert from dm.detcert;
 select count(0) AS certrider from dm.certrider;
-select count(0) AS certlinkerfrom dm.certlinker;
+select count(0) AS certlinker from dm.certlinker;
 select count(0) AS certmapping from dm.certmapping;
 select count(0) AS mgclaim from dm.mgclaim;
 select count(0) AS mgorder from dm.mgorder;

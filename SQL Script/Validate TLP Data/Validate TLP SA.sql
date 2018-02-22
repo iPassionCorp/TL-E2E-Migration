@@ -84,7 +84,7 @@ and to_number(a.sa_add, '99999999999.99') <> b.benefit;
 
 --Validate Rider ADD not ML46, LE31
 select --count (0) 
-a.policyno, info.certificateno, a.customercode, info.sa as info_sa, a.sa_add, b.benefit,  
+a.policyno, info.certificateno, a.customercode, info.customerstatus, info.sa as info_sa, a.sa_add, b.benefit,  
 ceiling (to_number(info.sa, '99999999999.99') * (b.benefit/100)) as validate,
 ceiling (to_number(info.sa, '99999999999.99') * (b.benefit/100)) - to_number(a.sa_add, '99999999999.99') as diff
 from tlp.customerinfo info 
@@ -101,8 +101,8 @@ and to_number(a.sa_add, '99999999999.99') <> ceiling (to_number(info.sa, '999999
 
 --Validate Rider AME
 select --count (0) 
-a.policyno, info.certificateno, a.customercode, info.sa as info_sa, a.sa_me, b.benefit,  
-b.benefit as validate, to_number(info.sa, '99999999999.99') - b.benefit as diff
+a.policyno, info.certificateno, a.customercode, info.customerstatus, info.sa as info_sa, a.sa_me, b.benefit,  
+b.benefit as validate, to_number(a.sa_me, '99999999999.99') - b.benefit as diff
 from tlp.customerinfo info 
 join tlp.customersa a 
 	on a.policyno = info.policyno 

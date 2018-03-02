@@ -44,3 +44,7 @@ CREATE INDEX IF NOT EXISTS indx_person_07 ON person (personid, customerid);
 CREATE INDEX IF NOT EXISTS indx_person_08 ON person (personid, referenceid, customerid);
 
 CREATE INDEX IF NOT EXISTS indx_policy_01 ON policy (policyno);
+
+CREATE INDEX IF NOT EXISTS indx_premrate_01 ON premrate (type, rate, age, sex, term);
+
+CREATE INDEX IF NOT EXISTS indx_tpdrate_01 ON tpdrate (type, rate, age, sex, term);

@@ -513,6 +513,7 @@ CREATE TABLE dm.remark (
 	policyno text NULL,
 	department text NULL,
 	sequence text NULL,
+	message text Null
 )
 WITH (
 	OIDS=FALSE

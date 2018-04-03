@@ -1087,17 +1087,6 @@ WITH (
 	OIDS=FALSE
 ) ;	
 
-CREATE TABLE tlp.productuobbranchprovince(
-	provinceid text NULL,
-	pcode text NULL,
-	province text NULL,
-	flaguobbranch text NULL,
-	region text NULL,
-	branchcodechqpay text NULL
-) 
-WITH (
-	OIDS=FALSE
-) ;	
 
 CREATE TABLE tlp.productwhtratesetup(
 	whtaxtype text NULL,

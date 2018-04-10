@@ -99,7 +99,6 @@ CREATE TABLE dm.cert(
 	reserve text NULL,
 	mode text NULL,
 	payperiod text NULL,
-	paydate text NULL,
 	rpno text NULL, 
 	statdate1 text NULL,
 	oldstatcert1 text NULL,

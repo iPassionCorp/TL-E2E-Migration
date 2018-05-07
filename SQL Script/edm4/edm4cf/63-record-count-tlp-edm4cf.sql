@@ -2,3 +2,11 @@ select count(0) AS count_splitpremiumamout from tlp.splitpremiumamout;
 select count(0) AS count_customersa from tlp.customersa;
 select count(0) AS count_customerinfo from tlp.customerinfo;
 select count(0) AS count_payment from tlp.payment;
+select count(0) AS count_claimPayment from tlp.claimPayment
+select count(0) AS count_claimPaymentDetail from tlp.claimPaymentDetail
+select count(0) AS count_claimRegisterDetail from tlp.claimRegisterDetail
+select count(0) AS count_claimRegisterHeader from tlp.claimRegisterHeader
+select count(0) AS count_masProduct from tlp.masProduct
+select count(0) AS count_masProductCoverage from tlp.masProductCoverage
+select count(0) AS count_masProductCoverageClaim from tlp.masProductCoverageClaim
+select count(0) AS count_masRiskType from tlp.masRiskType

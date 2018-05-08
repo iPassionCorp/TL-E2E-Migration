@@ -16,4 +16,3 @@ truncate table tlitext.mghis;
 truncate table tlitext.mginsmemo;
 truncate table tlitext.mginterest;
 truncate table tlitext.mgreceiver;
-

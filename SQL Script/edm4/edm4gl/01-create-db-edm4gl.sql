@@ -63,7 +63,7 @@ WITH (
 ) ;
 
 
-CREATE TABLE dm.dth(
+CREATE TABLE dm.dthordo(
 	policyno text NULL,
 	receivedate text NULL,
 	accidentdate text NULL,
@@ -118,7 +118,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE dm.rid(
+CREATE TABLE dm.ridordo(
 	policyno text NULL,
 	receivedate text NULL,
 	ridertype text NULL,
@@ -128,7 +128,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE dm.dhs(
+CREATE TABLE dm.dhsordo(
 	policyno text NULL,
 	receivedate text NULL,
 	seqno text NULL,
@@ -144,7 +144,7 @@ WITH (
 ) ;
 
 
-CREATE TABLE dm.bnf(
+CREATE TABLE dm.bnfordo(
 	policyno text NULL,
 	receivedate text NULL,
 	seqno text NULL,
@@ -265,7 +265,7 @@ WITH (
 ) ;
 
 
-CREATE TABLE dm.voi(
+CREATE TABLE dm.voiordo(
 	claimtype text NULL,
 	policyno text NULL,
 	accidentdate text NULL,
@@ -338,6 +338,69 @@ CREATE TABLE dm.ords(
 	riderpay text NULL,
 	payrate text NULL,
 	causetype text NULL,
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.icd10(
+	code text NULL,                   
+	detail1 text NULL,                               
+	detail2 text NULL,
+	illnesscode text NULL,
+	rangeofstay text NULL,             
+	isicd10 text NULL,
+	keyword text NULL,
+	simpledisease text NULL,
+	deadlydisease text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.hospital(
+	code text NULL,                    
+	prename text NULL, 
+	name text NULL,               
+	company text NULL,
+	address1 text NULL,            
+	address2 text NULL,
+	paytype text NULL,
+	zone text NULL,             
+	level text NULL,
+	informalrecordexpense text NULL,
+	istlmedicarehospital text NULL,
+	istlmedicaredate text NULL,
+	fax1 text NULL,
+	extensionfax1 text NULL,                              
+	fax2 text NULL,                
+	extensionfax2 text NULL,
+	incomingfax1 text NULL,
+	incomingfax2 text NULL,
+	ipdright text NULL,
+	ipdrightdate text NULL,
+	opdright text NULL,
+    opdrightdate text NULL,
+	incomingfax3 text NULL,
+	incomingfax4 text NULL,
+	incomingfax5 text NULL,
+	incomingfax6 text NULL,
+	showhospitalname text NULL,
+	formalrecordexpense text NULL,
+    email1 text NULL,
+    email2 text NULL,
+    email3 text NULL,
+    email4 text NULL,
+    sendemail1 text NULL,
+    sendemail2 text NULL,
+    sendemail3 text NULL,
+    sendemail4 text NULL,
+    automate text NULL,
+    isstricthospital text NULL,
+	recorddate text NULL,
+    recordid text NULL,
 
 )
 WITH (
@@ -690,6 +753,69 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE tlitext.hospital(
+	code text NULL,                    
+	prename text NULL, 
+	name text NULL,               
+	company text NULL,
+	address1 text NULL,            
+	address2 text NULL,
+	paytype text NULL,
+	zone text NULL,             
+	level text NULL,
+	informalrecordexpense text NULL,
+	istlmedicarehospital text NULL,
+	istlmedicaredate text NULL,
+	fax1 text NULL,
+	extensionfax1 text NULL,                              
+	fax2 text NULL,                
+	extensionfax2 text NULL,
+	incomingfax1 text NULL,
+	incomingfax2 text NULL,
+	ipdright text NULL,
+	ipdrightdate text NULL,
+	opdright text NULL,
+    opdrightdate text NULL,
+	incomingfax3 text NULL,
+	incomingfax4 text NULL,
+	incomingfax5 text NULL,
+	incomingfax6 text NULL,
+	showhospitalname text NULL,
+	formalrecordexpense text NULL,
+    email1 text NULL,
+    email2 text NULL,
+    email3 text NULL,
+    email4 text NULL,
+    sendemail1 text NULL,
+    sendemail2 text NULL,
+    sendemail3 text NULL,
+    sendemail4 text NULL,
+    automate text NULL,
+    isstricthospital text NULL,
+	recorddate text NULL,
+    recordid text NULL,
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE tlitext.icd10(
+	code text NULL,                   
+	detail1 text NULL,                               
+	detail2 text NULL,
+	illnesscode text NULL,
+	rangeofstay text NULL,             
+	isicd10 text NULL,
+	keyword text NULL,
+	simpledisease text NULL,
+	deadlydisease text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
 
 
 CREATE TABLE tlp.appbeneficiary (

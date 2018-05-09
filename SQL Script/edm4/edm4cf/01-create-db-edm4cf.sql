@@ -424,6 +424,69 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE dm.icd10(
+	code text NULL,                   
+	detail1 text NULL,                               
+	detail2 text NULL,
+	illnesscode text NULL,
+	rangeofstay text NULL,             
+	isicd10 text NULL,
+	keyword text NULL,
+	simpledisease text NULL,
+	deadlydisease text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.hospital(
+	code text NULL,                    
+	prename text NULL, 
+	name text NULL,               
+	company text NULL,
+	address1 text NULL,            
+	address2 text NULL,
+	paytype text NULL,
+	zone text NULL,             
+	level text NULL,
+	informalrecordexpense text NULL,
+	istlmedicarehospital text NULL,
+	istlmedicaredate text NULL,
+	fax1 text NULL,
+	extensionfax1 text NULL,                              
+	fax2 text NULL,                
+	extensionfax2 text NULL,
+	incomingfax1 text NULL,
+	incomingfax2 text NULL,
+	ipdright text NULL,
+	ipdrightdate text NULL,
+	opdright text NULL,
+    opdrightdate text NULL,
+	incomingfax3 text NULL,
+	incomingfax4 text NULL,
+	incomingfax5 text NULL,
+	incomingfax6 text NULL,
+	showhospitalname text NULL,
+	formalrecordexpense text NULL,
+    email1 text NULL,
+    email2 text NULL,
+    email3 text NULL,
+    email4 text NULL,
+    sendemail1 text NULL,
+    sendemail2 text NULL,
+    sendemail3 text NULL,
+    sendemail4 text NULL,
+    automate text NULL,
+    isstricthospital text NULL,
+	recorddate text NULL,
+    recordid text NULL,
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 CREATE TABLE tlitext.compensateid (
 	compensateid text NULL,
 	referenceid text NULL
@@ -825,6 +888,68 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE tlitext.hospital(
+	code text NULL,                    
+	prename text NULL, 
+	name text NULL,               
+	company text NULL,
+	address1 text NULL,            
+	address2 text NULL,
+	paytype text NULL,
+	zone text NULL,             
+	level text NULL,
+	informalrecordexpense text NULL,
+	istlmedicarehospital text NULL,
+	istlmedicaredate text NULL,
+	fax1 text NULL,
+	extensionfax1 text NULL,                              
+	fax2 text NULL,                
+	extensionfax2 text NULL,
+	incomingfax1 text NULL,
+	incomingfax2 text NULL,
+	ipdright text NULL,
+	ipdrightdate text NULL,
+	opdright text NULL,
+    opdrightdate text NULL,
+	incomingfax3 text NULL,
+	incomingfax4 text NULL,
+	incomingfax5 text NULL,
+	incomingfax6 text NULL,
+	showhospitalname text NULL,
+	formalrecordexpense text NULL,
+    email1 text NULL,
+    email2 text NULL,
+    email3 text NULL,
+    email4 text NULL,
+    sendemail1 text NULL,
+    sendemail2 text NULL,
+    sendemail3 text NULL,
+    sendemail4 text NULL,
+    automate text NULL,
+    isstricthospital text NULL,
+	recorddate text NULL,
+    recordid text NULL,
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.icd10(
+	code text NULL,                   
+	detail1 text NULL,                               
+	detail2 text NULL,
+	illnesscode text NULL,
+	rangeofstay text NULL,             
+	isicd10 text NULL,
+	keyword text NULL,
+	simpledisease text NULL,
+	deadlydisease text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
 
 CREATE TABLE tlp.claimpayment (
 	payment_id text NULL,

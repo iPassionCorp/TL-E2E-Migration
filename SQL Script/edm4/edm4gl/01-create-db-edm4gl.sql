@@ -1,789 +1,161 @@
-CREATE TABLE dm.compensateid(
-	compensateid text NULL,
-	referenceid text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.customer(
-	customerid text NULL,
-	referenceid text NULL,
-	referencetype text NULL,
-	birthdate text NULL,
-	sex text NULL,
-	contactnameid text NULL,
-	contactaddressid text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE dm.name(
-	nameid text NULL,
-	personid text NULL,
-	prename text NULL,
-	firstname text NULL,
-	lastname text NULL,
-	startdate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.person(
-	personid text NULL,
-	referenceid text NULL,
-	referencetype text NULL,
-	birthdate text NULL,
-	sex text NULL,
-	customerid text NULL,
-	bluecard text NULL,
-	reserve text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.policy(
-	productcode text NULL,
-	rate text NULL,
-	name text NULL,
-	type text NULL,
-	effectivedate text NULL,
-	planname text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE dm.cert(
-	policyno text NULL,
-	certno text NULL, 
-	appno text NULL,
-	reqdate text NULL,
-	nameid text NULL,
-	age text NULL,
-	smi text NULL, 
-	lifesum text NULL,
-	accidentsum text NULL,
-	period text NULL,
-	loan_term text NULL,
-	lifepremium text NULL,
-	extrapremium text NULL,
-	tpdpremium text NULL,
-	extratpdpremium text NULL,
-	addpremium text NULL,
-	em text NULL,
-	tpd text NULL,
-	effectivedate text NULL,
-	maturedate text NULL,
-	premiumdate text NULL,
-	certyyyymm text NULL, 
-	statcer text NULL,
-	statcer2 text NULL, 
-	statdate2 text NULL,
-	informdate1 text NULL,
-	paydate1 text NULL,
-	amount1 text NULL,
-	informdate2 text NULL,
-	paydate2 text NULL,
-	amount2 text NULL,
-	deaddate text NULL,
-	endownmentyear text NULL,
-	deadcause text NULL,
-	receiptflag text NULL,
-	referenceno text NULL,
-	reserve text NULL,
-	mode text NULL,
-	payperiod text NULL,
-	rpno text NULL, 
-	statdate1 text NULL,
-	oldstatcert1 text NULL,
-	oldstatcert2 text NULL, 
-	oldstatcertdate1 text NULL,
-	oldstatcertdate2 text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.detcert(
-	policyno text NULL,
-	certno text NULL,
-	code text NULL,
-	address1 text NULL,
-	address2 text NULL,
-	telephoneno text NULL,
-	mariagestatus text NULL,
-	recname1 text NULL,
-	percent1 text NULL,
-	relationshipcode1 text NULL,
-	recname2 text NULL,
-	percent2 text NULL,
-	relationshipcode2 text NULL,
-	recname3 text NULL,
-	percent3 text NULL,
-	relationshipcode3 text NULL,
-	analist text NULL,
-	prmiseno text NULL,
-	prmiseno2 text NULL,
-	loantype text NULL,
-	med text NULL,
-	reserve text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.certrider(
-	productcode text NULL,
-	certno text NULL,
-	ridertype text NULL,
-	sum text NULL,
-	premium text NULL,
-	extrapremium text NULL,
-	riderstatus text NULL,
-	riderstatusdate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE dm.certlinker(
-	policynohp text NULL,          
-	certnohp text NULL,           
-	policynocp text NULL,     
-	certnocp text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE dm.orctrl(
-	rpno text NULL,
-	policyno text NULL,
-	certno text NULL,
-	effectivedate text NULL,
-	payperiod text NULL,
-	paydate text NULL,
-	premium text NULL,
-	extraprem text NULL,
-	sysdate text NULL,
-	currentstatus text NULL,
-	originalstatus text NULL,
-	mode text NULL,
-	time text NULL,
-	requestdate text NULL,
-	submitno text NULL,
-	graceperiod text NULL,
-	printeddate text NULL,
-	submitbranch text NULL,
-	userid text NULL,
-	reasoncode text NULL,
-	moneyok text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE dm.rprider(
-	rpno text NULL,
-	ridertype text NULL,
-	riderpremium text NULL,
-	extrapremium text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE dm.certmapping(
-	productcode text NULL,
-	certno text NULL,
-	rproductcode text NULL,
-	rcertno text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.mgclaim(
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
+CREATE TABLE dm.claim(
 	claimtype text NULL,
+	msttype text NULL,
+	policyno text NULL,
+	receiveyyyymm text NULL,
 	sectioncode text NULL,
 	orderno text NULL,
 	referenceno text NULL,
-	linkerno text NULL,
-	okdate text NULL,
-	policyno text NULL,
-	ismigration text NULL
+	okdate text NULL
+ 
 )
 WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE dm.mgorder(
+CREATE TABLE dm.eclm(
 	sectioncode text NULL,
 	orderno text NULL,
+	claimtype text NULL,
 	receivetime text NULL,
-	causecode text NULL,
-	causedetail text NULL,
-	receiverid text NULL,
-	considerid text NULL,
-	admitdate text NULL,
+	causecode1 text NULL,
+	causedetail1 text NULL,
+	causecode2 text NULL,
+	causedetail2 text NULL,
+	specialcauseflag text NULL,
+	hospitalcode text NULL,
+	psysiciancertificate text NULL,
 	admitflag text NULL,
-	billingorderno text NULL,
-	interimflag text NULL,
-	hospitalcode text NULL,
-	receivedocdate text NULL,
-	calsurdate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.mgpay(
-	certno text NULL,
-	receivedate text NULL,
-	accidentdate text NULL,
-	sectioncode text NULL,
-	orderno text NULL,
-	policystatus text NULL,
-	policystatusdate text NULL,
-	policystatus2 text NULL,
-	policystatusdate2 text NULL,
-	branchcode text NULL,
-	servicebranch text NULL,
-	claimtype text NULL,
-	paytype text NULL,
-	proofinsuredage text NULL,
-	disabilitytype text NULL,
-	disnumber text NULL,
-	payrate text NULL,
-	payamount text NULL,
-	accdamount text NULL,
-	surrenderamount text NULL,
-	returnamount text NULL,
-	deductamount text NULL,
-	claimokdate text NULL,
-	claimpaydate text NULL,
-	allowtype text NULL,
-	bookstatus text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE dm.mgpayrider(
-	certno text NULL, 
-	accidentdate text NULL,
-	receivedate text NULL,
-	sectioncode text NULL,
-	orderno text NULL,
-	policystatus text NULL,
-	policystatusdate text NULL,
-	policystatus2 text NULL,
-	policystatusdate2 text NULL,
-	branchcode text NULL,
-	servicebranch text NULL,
-	amestartdate text NULL,
-	ameday text NULL,
-	ameexpense text NULL,
-	amepayment text NULL,
-	tdday text NULL,
-	tdstartdate text NULL,
-	tdpayment text NULL,
-	returnamount text NULL,
-	deductamount text NULL,
-	voiddate text NULL,
-	claimokdate text NULL,
-	claimpaydate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.mghis(
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
-	claimtype text NULL,
-	seqno text NULL,
-	remarkdate text NULL,
-	remarkno text NULL,
-	remark text NULL,
-	employeeid text NULL,
-	rectime text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE dm.mginsmemo(
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
-	memocode text NULL,
-	detail1 text NULL,
-	detail2 text NULL,
-	savedate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.mginterest(
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
-	ridertype text NULL,
-	paytype text NULL,
-	startdate text NULL,
-	enddate text NULL,
-	day text NULL,
-	payamount text NULL,
-	interestamount text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.mgreceiver(
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
-	seqno text NULL,
-	prename text NULL,
-	firstname text NULL,
-	lastname text NULL,
-	type text NULL,
-	payamount text NULL,
-	address text NULL,
-	tumbon text NULL,
-	zipcode text NULL,
-	mobilephone text NULL,
-	citizenid text NULL,
-	paytype text NULL,
-	banktype text NULL,
-	bankcode text NULL,
-	bankbranch text NULL,
-	bankaccount text NULL,
-	guardianbeneficiary text NULL,
-	ispay text NULL,
-	haveindicia text NULL,
-	countrycode text NULL,
-	claimpaydate text NULL,
-	bookstatus text NULL,
-	chqdate text NULL,
-	chqno text NULL,
-	docno text NULL,
-	isbeneficiarykilled text NULL,
-	birthdate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.queue(
+	admitstartdate text NULL,
+	investigationcode1 text NULL,
+	investigationcode2 text NULL,
+	investigationcode3 text NULL,
+	treatmentcode1 text NULL,
+	treatmentcode2 text NULL,
+	treatmentcode3 text NULL,
+	notation text NULL,
+	receiverid text NULL,
+	precertconsiderid text NULL,
 	considerid text NULL,
-	queuetype text NULL,
-	jobtype text NULL,
-	jobcode text NULL,
-	offerdate text NULL,
-	referenceno text NULL,
+	linksectionorder text NULL,
+	marketamount text NULL,
+	saveamount text NULL,
+	provincecode text NULL,
+	paylimit text NULL,
+	interestclaim text NULL,
+	interestpaystart text NULL,
+	interestpolicy text NULL,
+	branchconsiderid text NULL,
+	branchuserid text NULL,
+	pureaccidentflag text NULL,
+	severeaccidentflag text NULL,
+	medicalprocedure text NULL,
+	screeningassessor text NULL,
+	checkerid text NULL,
+	automateflag text NULL,
+	rbdays text NULL,
+	icudays text NULL,
+	isvip text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE dm.dth(
+	policyno text NULL,
 	receivedate text NULL,
-	modifydate text NULL,
-	modifytime text NULL,
-	status text NULL,
-	xconsiderid text NULL,
-	firstjobtype text NULL,
-	firstjobcode text NULL,
-	firstxconsiderid text NULL,
-	firstofferdate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.compensateid(
-	compensateid text NULL,
-	referenceid text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.customer(
-	customerid text NULL,
-	referenceid text NULL,
-	referencetype text NULL,
-	birthdate text NULL,
-	sex text NULL,
-	contactnameid text NULL,
-	contactaddressid text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE tlitext.name(
-	nameid text NULL,
-	personid text NULL,
-	prename text NULL,
-	firstname text NULL,
-	lastname text NULL,
-	startdate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.person(
-	personid text NULL,
-	referenceid text NULL,
-	referencetype text NULL,
-	birthdate text NULL,
-	sex text NULL,
-	customerid text NULL,
-	bluecard text NULL,
-	reserve text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.policy(
-	productcode text NULL,
-	rate text NULL,
-	name text NULL,
-	type text NULL,
-	effectivedate text NULL,
-	planname text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE tlitext.cert(
-	policyno text NULL,
-	certno text NULL, 
-	appno text NULL,
-	reqdate text NULL,
-	nameid text NULL,
-	age text NULL,
-	smi text NULL, 
-	lifesum text NULL,
-	accidentsum text NULL,
-	period text NULL,
-	loan_term text NULL,
-	lifepremium text NULL,
-	extrapremium text NULL,
-	tpdpremium text NULL,
-	extratpdpremium text NULL,
-	addpremium text NULL,
-	em text NULL,
-	tpd text NULL,
-	effectivedate text NULL,
-	maturedate text NULL,
-	premiumdate text NULL,
-	certyyyymm text NULL, 
-	statcer text NULL,
-	statcer2 text NULL, 
-	statdate2 text NULL,
-	informdate1 text NULL,
-	paydate1 text NULL,
-	amount1 text NULL,
-	informdate2 text NULL,
-	paydate2 text NULL,
-	amount2 text NULL,
-	deaddate text NULL,
-	endownmentyear text NULL,
-	deadcause text NULL,
-	receiptflag text NULL,
-	referenceno text NULL,
-	reserve text NULL,
+	accidentdate text NULL,
+	sectioncode text NULL,
+	orderno text NULL,
+	policystatus1 text NULL,
+	policystatusdate1 text NULL,
+	policystatus2 text NULL,
+	policystatusdate2 text NULL,
+	proofinsuredage text NULL,
+	branch text NULL,
+	lcode text NULL,
 	mode text NULL,
-	payperiod text NULL,
-	rpno text NULL, 
-	statdate1 text NULL,
-	oldstatcert1 text NULL,
-	oldstatcert2 text NULL, 
-	oldstatcertdate1 text NULL,
-	oldstatcertdate2 text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.detcert(
-	policyno text NULL,
-	certno text NULL,
-	code text NULL,
-	address1 text NULL,
-	address2 text NULL,
-	telephoneno text NULL,
-	mariagestatus text NULL,
-	recname1 text NULL,
-	percent1 text NULL,
-	relationshipcode1 text NULL,
-	recname2 text NULL,
-	percent2 text NULL,
-	relationshipcode2 text NULL,
-	recname3 text NULL,
-	percent3 text NULL,
-	relationshipcode3 text NULL,
-	analist text NULL,
-	prmiseno text NULL,
-	prmiseno2 text NULL,
-	loantype text NULL,
-	med text NULL,
-	reserve text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.certrider(
-	productcode text NULL,
-	certno text NULL,
-	ridertype text NULL,
-	sum text NULL,
-	premium text NULL,
-	extrapremium text NULL,
-	riderstatus text NULL,
-	riderstatusdate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE tlitext.certlinker(
-	policynohp text NULL,          
-	certnohp text NULL,           
-	policynocp text NULL,     
-	certnocp text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE tlitext.orctrl(
-	rpno text NULL,
-	policyno text NULL,
-	certno text NULL,
-	effectivedate text NULL,
+	paylastperiod text NULL,
+	paylastdate text NULL,
 	payperiod text NULL,
 	paydate text NULL,
-	premium text NULL,
-	extraprem text NULL,
-	sysdate text NULL,
-	currentstatus text NULL,
-	originalstatus text NULL,
-	mode text NULL,
-	time text NULL,
-	requestdate text NULL,
-	submitno text NULL,
-	graceperiod text NULL,
-	printeddate text NULL,
-	submitbranch text NULL,
-	userid text NULL,
-	reasoncode text NULL,
-	moneyok text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE tlitext.rprider(
-	rpno text NULL,
-	ridertype text NULL,
-	riderpremium text NULL,
-	extrapremium text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-CREATE TABLE tlitext.certmapping(
-	productcode text NULL,
-	certno text NULL,
-	rproductcode text NULL,
-	rcertno text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.mgclaim(
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
-	claimtype text NULL,
-	sectioncode text NULL,
-	orderno text NULL,
-	referenceno text NULL,
-	linkerno text NULL,
-	okdate text NULL,
-	policyno text NULL,
-	ismigration text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.mgorder(
-	sectioncode text NULL,
-	orderno text NULL,
-	receivetime text NULL,
-	causecode text NULL,
-	causedetail text NULL,
-	receiverid text NULL,
-	considerid text NULL,
-	atlitextitdate text NULL,
-	atlitextitflag text NULL,
-	billingorderno text NULL,
-	interimflag text NULL,
-	hospitalcode text NULL,
-	receivedocdate text NULL,
-	calsurdate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.mgpay(
-	certno text NULL,
-	receivedate text NULL,
-	accidentdate text NULL,
-	sectioncode text NULL,
-	orderno text NULL,
-	policystatus text NULL,
-	policystatusdate text NULL,
-	policystatus2 text NULL,
-	policystatusdate2 text NULL,
-	branchcode text NULL,
+	aplstartdate text NULL,
+	aplenddate text NULL,
+	extendstartdate text NULL,
+	extendenddate text NULL,
+	expiredate text NULL,
+	renewaldate text NULL,
+	renewalpayperiod text NULL,
+	expiredatebeforerenewal text NULL,
 	servicebranch text NULL,
-	claimtype text NULL,
-	paytype text NULL,
-	proofinsuredage text NULL,
-	disabilitytype text NULL,
-	disnumber text NULL,
-	payrate text NULL,
-	payamount text NULL,
-	accdamount text NULL,
-	surrenderamount text NULL,
-	returnamount text NULL,
-	deductamount text NULL,
+	serviceunit text NULL,
 	claimokdate text NULL,
 	claimpaydate text NULL,
-	allowtype text NULL,
-	bookstatus text NULL
+	claimpaytype text NULL,
+	paylifesum text NULL,
+	payridersum text NULL,
+	rejectflag text NULL,
+	rejectamount text NULL,
+	rejectdate text NULL,
+	claimpersoncode text NULL,
+	interestclaim text NULL,
+	interestpaystart text NULL,
+	dependenttype text NULL,
+	dependentsequence text NULL,
+	paaccidentdate text NULL,
+	firstclaimpaydate text NULL,
+	effectivedate text NULL,
+	calsurcash text NULL,
+	plancode text NULL,
+	unitcode text NULL,
+	oicseqtype text NULL,
+	paylifesumtype text NULL
+
 )
 WITH (
 	OIDS=FALSE
 ) ;
 
-
-CREATE TABLE tlitext.mgpayrider(
-	certno text NULL, 
-	accidentdate text NULL,
+CREATE TABLE dm.rid(
+	policyno text NULL,
 	receivedate text NULL,
-	sectioncode text NULL,
-	orderno text NULL,
-	policystatus text NULL,
-	policystatusdate text NULL,
-	policystatus2 text NULL,
-	policystatusdate2 text NULL,
-	branchcode text NULL,
-	servicebranch text NULL,
-	amestartdate text NULL,
-	ameday text NULL,
-	ameexpense text NULL,
-	amepayment text NULL,
-	tdday text NULL,
-	tdstartdate text NULL,
-	tdpayment text NULL,
-	returnamount text NULL,
-	deductamount text NULL,
-	voiddate text NULL,
-	claimokdate text NULL,
-	claimpaydate text NULL
+	ridertype text NULL,
+	rideramount text NULL
 )
 WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE tlitext.mghis(
-	certno text NULL,
-	accidentdate text NULL,
+CREATE TABLE dm.dhs(
+	policyno text NULL,
 	receivedate text NULL,
-	claimtype text NULL,
 	seqno text NULL,
 	remarkdate text NULL,
 	remarkno text NULL,
 	remark text NULL,
 	employeeid text NULL,
 	rectime text NULL
+
 )
 WITH (
 	OIDS=FALSE
 ) ;
 
 
-CREATE TABLE tlitext.mginsmemo(
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
-	memocode text NULL,
-	detail1 text NULL,
-	detail2 text NULL,
-	savedate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.mginterest(
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
-	ridertype text NULL,
-	paytype text NULL,
-	startdate text NULL,
-	enddate text NULL,
-	day text NULL,
-	payamount text NULL,
-	interestamount text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.mgreceiver(
-	certno text NULL,
-	accidentdate text NULL,
+CREATE TABLE dm.bnf(
+	policyno text NULL,
 	receivedate text NULL,
 	seqno text NULL,
 	prename text NULL,
 	firstname text NULL,
 	lastname text NULL,
+	relationship text NULL,
+	ismurderer text NULL,
+	no text NULL,
 	type text NULL,
+	percentshare text NULL,
 	payamount text NULL,
 	address text NULL,
 	tumbon text NULL,
@@ -791,46 +163,534 @@ CREATE TABLE tlitext.mgreceiver(
 	mobilephone text NULL,
 	citizenid text NULL,
 	paytype text NULL,
-	banktype text NULL,
 	bankcode text NULL,
 	bankbranch text NULL,
 	bankaccount text NULL,
 	guardianbeneficiary text NULL,
 	ispay text NULL,
+	birthdate text NULL,
 	haveindicia text NULL,
-	countrycode text NULL,
-	claimpaydate text NULL,
-	bookstatus text NULL,
-	chqdate text NULL,
-	chqno text NULL,
-	docno text NULL,
-	isbeneficiarykilled text NULL,
-	birthdate text NULL
+	countrycode text NULL
+
 )
 WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE tlitext.queue(
-	considerid text NULL,
-	queuetype text NULL,
-	jobtype text NULL,
-	jobcode text NULL,
-	offerdate text NULL,
-	referenceno text NULL,
+CREATE TABLE dm.oacm(
+	policyno text NULL,
+	accidentdate text NULL,
 	receivedate text NULL,
-	modifydate text NULL,
-	modifytime text NULL,
-	status text NULL,
-	xconsiderid text NULL,
-	firstjobtype text NULL,
-	firstjobcode text NULL,
-	firstxconsiderid text NULL,
-	firstofferdate text NULL
+	sectioncode text NULL,
+	orderno text NULL,
+	policystatus1 text NULL,
+	policystatusdate1 text NULL,
+	policystatus2 text NULL,
+	policystatusdate2 text NULL,
+	branch text NULL,
+	lcode text NULL,
+	unitcode text NULL,
+	mode text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	aplstartdate text NULL,
+	aplenddate text NULL,
+	extendstartdate text NULL,
+	extendenddate text NULL,
+	expiredate text NULL,
+	renewaldate text NULL,
+	renewalpayperiod text NULL,
+	expiredatebeforerenewal text NULL,
+	servicebranch text NULL,
+	serviceunit text NULL,
+	claimokdate text NULL,
+	claimpaydate text NULL,
+	claimpersoncode text NULL,
+	dependenttype text NULL,
+	dependentsequence text NULL,
+	firstclaimpaydate text NULL,
+	effectivedate text NULL,
+	plancode text NULL
+
 )
 WITH (
 	OIDS=FALSE
 ) ;
+
+CREATE TABLE dm.hordodsYYMM(
+	policyno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	seqno text NULL,
+	remarkdate text NULL,
+	remarkno text NULL,
+	remark text NULL,
+	employeeid text NULL,
+	rectime text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE dm.pay(
+	sectioncode text NULL,
+	orderno text NULL,
+	paytype text NULL,
+	bankcode text NULL,
+	bankbranch text NULL,
+	bankaccount text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE dm.insmemo(
+	claimtype text NULL,
+	msttype text NULL,
+	policyno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	memocode text NULL,
+	detail1 text NULL,
+	detail2 text NULL,
+	savedate text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE dm.voi(
+	claimtype text NULL,
+	policyno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	ridertype text NULL,
+	voidtype text NULL,
+	voiddate text NULL,
+	voidamount text NULL,
+	voidfirstperiod text NULL,
+	premtype text NULL,
+	tellbookstatus text NULL,
+	endorsementstatus text NULL,
+	debtflag text NULL,
+	startdate text NULL,
+	enddate text NULL,
+	addpremium text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE dm.cmem(
+	sectioncode text NULL,
+	orderno text NULL,
+	seqno text NULL,
+	detail text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.odis(
+	policyno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	ridertype text NULL,
+	organflag text NULL,
+	organ text NULL,
+	exceptflag text NULL,
+	exceptstartdate text NULL,
+	exceptenddate text NULL,
+	exceptstartperiod text NULL,
+	exceptendperiod text NULL,
+	premiumflag text NULL,
+	premiumamount text NULL,
+	premiumstartdate text NULL,
+	premiumenddate text NULL,
+	allowperiod text NULL,
+	allowance text NULL,
+	allowstartdate text NULL,
+	premiuminterest text NULL,
+	premintstartdate text NULL,
+	premintenddate text NULL,
+	ridersurcash text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.ords(
+	policyno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	ridertype text NULL,
+	ridersum text NULL,
+	riderpay text NULL,
+	payrate text NULL,
+	causetype text NULL,
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.claim(
+	claimtype text NULL,
+	msttype text NULL,
+	policyno text NULL,
+	receiveyyyymm text NULL,
+	sectioncode text NULL,
+	orderno text NULL,
+	referenceno text NULL,
+	okdate text NULL
+ 
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.eclm(
+	sectioncode text NULL,
+	orderno text NULL,
+	claimtype text NULL,
+	receivetime text NULL,
+	causecode1 text NULL,
+	causedetail1 text NULL,
+	causecode2 text NULL,
+	causedetail2 text NULL,
+	specialcauseflag text NULL,
+	hospitalcode text NULL,
+	psysiciancertificate text NULL,
+	admitflag text NULL,
+	admitstartdate text NULL,
+	investigationcode1 text NULL,
+	investigationcode2 text NULL,
+	investigationcode3 text NULL,
+	treatmentcode1 text NULL,
+	treatmentcode2 text NULL,
+	treatmentcode3 text NULL,
+	notation text NULL,
+	receiverid text NULL,
+	precertconsiderid text NULL,
+	considerid text NULL,
+	linksectionorder text NULL,
+	marketamount text NULL,
+	saveamount text NULL,
+	provincecode text NULL,
+	paylimit text NULL,
+	interestclaim text NULL,
+	interestpaystart text NULL,
+	interestpolicy text NULL,
+	branchconsiderid text NULL,
+	branchuserid text NULL,
+	pureaccidentflag text NULL,
+	severeaccidentflag text NULL,
+	medicalprocedure text NULL,
+	screeningassessor text NULL,
+	checkerid text NULL,
+	automateflag text NULL,
+	rbdays text NULL,
+	icudays text NULL,
+	isvip text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE tlitext.dth(
+	policyno text NULL,
+	receivedate text NULL,
+	accidentdate text NULL,
+	sectioncode text NULL,
+	orderno text NULL,
+	policystatus1 text NULL,
+	policystatusdate1 text NULL,
+	policystatus2 text NULL,
+	policystatusdate2 text NULL,
+	proofinsuredage text NULL,
+	branch text NULL,
+	lcode text NULL,
+	mode text NULL,
+	paylastperiod text NULL,
+	paylastdate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	aplstartdate text NULL,
+	aplenddate text NULL,
+	extendstartdate text NULL,
+	extendenddate text NULL,
+	expiredate text NULL,
+	renewaldate text NULL,
+	renewalpayperiod text NULL,
+	expiredatebeforerenewal text NULL,
+	servicebranch text NULL,
+	serviceunit text NULL,
+	claimokdate text NULL,
+	claimpaydate text NULL,
+	claimpaytype text NULL,
+	paylifesum text NULL,
+	payridersum text NULL,
+	rejectflag text NULL,
+	rejectamount text NULL,
+	rejectdate text NULL,
+	claimpersoncode text NULL,
+	interestclaim text NULL,
+	interestpaystart text NULL,
+	dependenttype text NULL,
+	dependentsequence text NULL,
+	paaccidentdate text NULL,
+	firstclaimpaydate text NULL,
+	effectivedate text NULL,
+	calsurcash text NULL,
+	plancode text NULL,
+	unitcode text NULL,
+	oicseqtype text NULL,
+	paylifesumtype text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.rid(
+	policyno text NULL,
+	receivedate text NULL,
+	ridertype text NULL,
+	rideramount text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.dhs(
+	policyno text NULL,
+	receivedate text NULL,
+	seqno text NULL,
+	remarkdate text NULL,
+	remarkno text NULL,
+	remark text NULL,
+	employeeid text NULL,
+	rectime text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE tlitext.bnf(
+	policyno text NULL,
+	receivedate text NULL,
+	seqno text NULL,
+	prename text NULL,
+	firstname text NULL,
+	lastname text NULL,
+	relationship text NULL,
+	ismurderer text NULL,
+	no text NULL,
+	type text NULL,
+	percentshare text NULL,
+	payamount text NULL,
+	address text NULL,
+	tumbon text NULL,
+	zipcode text NULL,
+	mobilephone text NULL,
+	citizenid text NULL,
+	paytype text NULL,
+	bankcode text NULL,
+	bankbranch text NULL,
+	bankaccount text NULL,
+	guardianbeneficiary text NULL,
+	ispay text NULL,
+	birthdate text NULL,
+	haveindicia text NULL,
+	countrycode text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.oacm(
+	policyno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	sectioncode text NULL,
+	orderno text NULL,
+	policystatus1 text NULL,
+	policystatusdate1 text NULL,
+	policystatus2 text NULL,
+	policystatusdate2 text NULL,
+	branch text NULL,
+	lcode text NULL,
+	unitcode text NULL,
+	mode text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	aplstartdate text NULL,
+	aplenddate text NULL,
+	extendstartdate text NULL,
+	extendenddate text NULL,
+	expiredate text NULL,
+	renewaldate text NULL,
+	renewalpayperiod text NULL,
+	expiredatebeforerenewal text NULL,
+	servicebranch text NULL,
+	serviceunit text NULL,
+	claimokdate text NULL,
+	claimpaydate text NULL,
+	claimpersoncode text NULL,
+	dependenttype text NULL,
+	dependentsequence text NULL,
+	firstclaimpaydate text NULL,
+	effectivedate text NULL,
+	plancode text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.hordodsYYMM(
+	policyno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	seqno text NULL,
+	remarkdate text NULL,
+	remarkno text NULL,
+	remark text NULL,
+	employeeid text NULL,
+	rectime text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE tlitext.pay(
+	sectioncode text NULL,
+	orderno text NULL,
+	paytype text NULL,
+	bankcode text NULL,
+	bankbranch text NULL,
+	bankaccount text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE tlitext.insmemo(
+	claimtype text NULL,
+	msttype text NULL,
+	policyno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	memocode text NULL,
+	detail1 text NULL,
+	detail2 text NULL,
+	savedate text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE tlitext.voi(
+	claimtype text NULL,
+	policyno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	ridertype text NULL,
+	voidtype text NULL,
+	voiddate text NULL,
+	voidamount text NULL,
+	voidfirstperiod text NULL,
+	premtype text NULL,
+	tellbookstatus text NULL,
+	endorsementstatus text NULL,
+	debtflag text NULL,
+	startdate text NULL,
+	enddate text NULL,
+	addpremium text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE tlitext.cmem(
+	sectioncode text NULL,
+	orderno text NULL,
+	seqno text NULL,
+	detail text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.odis(
+	policyno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	ridertype text NULL,
+	organflag text NULL,
+	organ text NULL,
+	exceptflag text NULL,
+	exceptstartdate text NULL,
+	exceptenddate text NULL,
+	exceptstartperiod text NULL,
+	exceptendperiod text NULL,
+	premiumflag text NULL,
+	premiumamount text NULL,
+	premiumstartdate text NULL,
+	premiumenddate text NULL,
+	allowperiod text NULL,
+	allowance text NULL,
+	allowstartdate text NULL,
+	premiuminterest text NULL,
+	premintstartdate text NULL,
+	premintenddate text NULL,
+	ridersurcash text NULL
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.ords(
+	policyno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	ridertype text NULL,
+	ridersum text NULL,
+	riderpay text NULL,
+	payrate text NULL,
+	causetype text NULL,
+
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
 
 CREATE TABLE tlp.appbeneficiary (
 	appno text NULL,

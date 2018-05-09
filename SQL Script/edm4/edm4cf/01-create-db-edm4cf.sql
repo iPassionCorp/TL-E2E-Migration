@@ -73,7 +73,7 @@ CREATE TABLE dm.policy (
 	"name" text NULL,
 	"type" text NULL,
 	effectivedate text NULL,
-	planname text NULL,
+	planname text NULL
 )
 WITH (
 	OIDS=FALSE
@@ -402,7 +402,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE dm.queue@cclaim (
+CREATE TABLE dm.queue(
 	considerid text NULL,
 	queuetype text NULL,
 	jobtype text NULL,
@@ -480,7 +480,7 @@ CREATE TABLE dm.hospital(
     automate text NULL,
     isstricthospital text NULL,
 	recorddate text NULL,
-    recordid text NULL,
+    recordid text NULL
 
 )
 WITH (
@@ -537,7 +537,7 @@ CREATE TABLE tlitext.policy (
 	"name" text NULL,
 	"type" text NULL,
 	effectivedate text NULL,
-	planname text NULL,
+	planname text NULL
 )
 WITH (
 	OIDS=FALSE
@@ -866,7 +866,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE tlitext.queue@cclaim (
+CREATE TABLE tlitext.queue(
 	considerid text NULL,
 	queuetype text NULL,
 	jobtype text NULL,
@@ -928,7 +928,7 @@ CREATE TABLE tlitext.hospital(
     automate text NULL,
     isstricthospital text NULL,
 	recorddate text NULL,
-    recordid text NULL,
+    recordid text NULL
 
 )
 WITH (

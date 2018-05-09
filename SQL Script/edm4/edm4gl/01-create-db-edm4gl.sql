@@ -472,7 +472,7 @@ WITH (
 ) ;
 
 
-CREATE TABLE tlitext.dth(
+CREATE TABLE tlitext.dthordo(
 	policyno text NULL,
 	receivedate text NULL,
 	accidentdate text NULL,
@@ -527,7 +527,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE tlitext.rid(
+CREATE TABLE tlitext.ridordo(
 	policyno text NULL,
 	receivedate text NULL,
 	ridertype text NULL,
@@ -537,7 +537,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE tlitext.dhs(
+CREATE TABLE tlitext.dhsordo(
 	policyno text NULL,
 	receivedate text NULL,
 	seqno text NULL,
@@ -553,7 +553,7 @@ WITH (
 ) ;
 
 
-CREATE TABLE tlitext.bnf(
+CREATE TABLE tlitext.bnfordo(
 	policyno text NULL,
 	receivedate text NULL,
 	seqno text NULL,
@@ -674,7 +674,7 @@ WITH (
 ) ;
 
 
-CREATE TABLE tlitext.voi(
+CREATE TABLE tlitext.voiordo(
 	claimtype text NULL,
 	policyno text NULL,
 	accidentdate text NULL,
@@ -746,7 +746,7 @@ CREATE TABLE tlitext.ords(
 	ridersum text NULL,
 	riderpay text NULL,
 	payrate text NULL,
-	causetype text NULL,
+	causetype text NULL
 
 )
 WITH (
@@ -793,7 +793,7 @@ CREATE TABLE tlitext.hospital(
     automate text NULL,
     isstricthospital text NULL,
 	recorddate text NULL,
-    recordid text NULL,
+    recordid text NULL
 
 )
 WITH (

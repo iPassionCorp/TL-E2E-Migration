@@ -1285,7 +1285,6 @@ WITH (
 ) ;
 
 CREATE TABLE tlp.policymaster (
-	customercode text NULL,
 	policyno text NULL,
 	appno text NULL,
 	plancode text NULL,
@@ -1354,7 +1353,8 @@ CREATE TABLE tlp.policymaster (
 	cv text NULL,
 	cvdate text NULL,
 	status2 text NULL,
-	statusdate2 text NULL
+	statusdate2 text NULL,
+	customercode text NULL
 )
 WITH (
 	OIDS=FALSE

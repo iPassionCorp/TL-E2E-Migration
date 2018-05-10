@@ -1,3 +1,38 @@
+DROP DATABASE IF EXISTS edm4gl;
+CREATE DATABASE edm4gl
+    TEMPLATE = template0
+    ENCODING = UTF8
+    LC_COLLATE = 'th_TH.UTF8'
+    LC_CTYPE   = 'th_TH.UTF8';
+
+DROP SCHEMA IF EXISTS tlp CASCADE;
+DROP SCHEMA IF EXISTS dm CASCADE;
+DROP SCHEMA IF EXISTS tlitext CASCADE;
+DROP SCHEMA IF EXISTS lookup CASCADE;
+
+CREATE SCHEMA tlp;
+CREATE SCHEMA dm;
+CREATE SCHEMA tlitext;
+CREATE SCHEMA lookup;
+
+CREATE TABLE dm.beneficiary 
+(
+	policytype text,
+	policyno text,
+	sequence text,
+	prename text,
+	firstname text,
+	lastname text,
+	relationshipcode text,
+	percentshare text,
+	personflag text,
+	idno text,
+	birthdate text
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 CREATE TABLE dm.claim(
 	claimtype text NULL,
 	msttype text NULL,
@@ -217,7 +252,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE dm.hordodsYYMM(
+CREATE TABLE dm.hordods(
 	policyno text NULL,
 	accidentdate text NULL,
 	receivedate text NULL,
@@ -626,7 +661,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE tlitext.hordodsYYMM(
+CREATE TABLE tlitext.hordods(
 	policyno text NULL,
 	accidentdate text NULL,
 	receivedate text NULL,
@@ -817,19 +852,6 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-
-CREATE TABLE tlp.appbeneficiary (
-	appno text NULL,
-	seqno text NULL,
-	beneficiaryname text NULL,
-	relationship text NULL,
-	percentage text NULL,
-	age text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;			
-
 CREATE TABLE tlp.appcustomer(
 	appno text NULL,
 	custprename text NULL,
@@ -895,8 +917,229 @@ CREATE TABLE tlp.appcustomeraddress(
 )
 WITH (
 	OIDS=FALSE
-) ;						
+) ;
 
+CREATE TABLE tlp.historystatus(
+	historycode text NULL,
+	policyno text NULL,
+	createdate text NULL,
+	username text NULL,
+	statusdate text NULL,
+	status text NULL,
+	statusremark text NULL,
+	statusdescription text NULL,
+	statusnew text NULL,
+	statusnewremark text NULL,
+	statusold text NULL,
+	statusoldremark text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;	
+
+CREATE TABLE tlp.policybeneficiary (
+ policyno text NULL,
+ seqno text NULL,
+ beneficiaryprename text NULL,
+ beneficiaryname text NULL,
+ beneficiarylastname text NULL,
+ relationship text NULL,
+ percentage text NULL,
+ age text NULL
+)
+WITH (
+ OIDS=FALSE
+) ;
+
+CREATE TABLE tlp.policymaster (
+	customercode text NULL,
+	policyno text NULL,
+	appno text NULL,
+	plancode text NULL,
+	planname text NULL,
+	prename text NULL,
+	frstname text NULL,
+	surname text NULL,
+	statusnew text NULL,
+	statusnewremark text NULL,
+	statusold text NULL,
+	statusoldremark text NULL,
+	sex text NULL,
+	medical text NULL,
+	class text NULL,
+	occtype text NULL,
+	extramort text NULL,
+	issuedage text NULL,
+	sa text NULL,
+	premlife text NULL,
+	premacc text NULL,
+	premexta text NULL,
+	premtotal text NULL,
+	mode text NULL,
+	payperiod text NULL,
+	covperiod text NULL,
+	effectivedate text NULL,
+	birthdate text NULL,
+	paymentdate text NULL,
+	nextduedate text NULL,
+	modifydate text NULL,
+	statusdate text NULL,
+	matdate text NULL,
+	expdate text NULL,
+	dateprintpolicy text NULL,
+	issuepolicydate text NULL,
+	idno text NULL,
+	stopdate text NULL,
+	stopreason text NULL,
+	deathdate text NULL,
+	receivefreelookdate text NULL,
+	receivefreelookdescription text NULL,
+	receivefreelookrealdate text NULL,
+	prefix text NULL,
+	sanew text NULL,
+	expdatenew text NULL,
+	cashexpire text NULL,
+	cashimmediate text NULL,
+	book text NULL,
+	tesco text NULL,
+	nocount text NULL,
+	bookpredic text NULL,
+	tescopredic text NULL,
+	sendstatus text NULL,
+	sendgiftdate text NULL,
+	userconfirm text NULL,
+	registermailtesco text NULL,
+	receivetescodate text NULL,
+	receivetescostatus text NULL,
+	receivetescoreason text NULL,
+	uploadxo text NULL,
+	extrarate text NULL,
+	effectivedateold text NULL,
+	matdateold text NULL,
+	expdateold text NULL,
+	issuedageold text NULL,
+	cv text NULL,
+	cvdate text NULL,
+	status2 text NULL,
+	statusdate2 text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlp.policypaid(
+	receiptno text NULL,
+	policyno text NULL,
+	seqno text NULL,
+	paiddate text NULL,
+	duedate text NULL,
+	nextduedate text NULL,
+	paidprem text NULL,
+	numberpay text NULL,
+	branchpay text NULL,
+	bankpay text NULL,
+	typepay text NULL,
+	yearpay text NULL,
+	paycount text NULL,
+	createdate text NULL,
+	cheqdate text NULL,
+	typecustomer text NULL,
+	username text NULL,
+	importby text NULL,
+	receiptstatus text NULL,
+	receiptdescription text NULL,
+	mode text NULL,
+	todate text NULL,
+	monthpay text NULL, 
+	premtotal text NULL,
+	descriptiondate text NULL,
+	partnersend text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlp.policyrider(
+	riderno text NULL,
+	policyno text NULL,
+	plancode text NULL,
+	statusnew text NULL,
+	statusold text NULL,
+	sa text NULL,
+	premrider text NULL,
+	premextra text NULL,
+	premtotal text NULL,
+	mode text NULL,
+	covperiod text NULL,
+	effectivedate text NULL,
+	startdate text NULL,
+	expdate text NULL,
+	issuedage text NULL,
+	attage text NULL,
+	statusdate text NULL,
+	endorsedate text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;	
+
+CREATE TABLE lookup.migratedate (
+	policyno text NOT NULL,
+	migratedate text NOT NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE lookup.planmapping (
+	tlpplancode varchar(8) NOT NULL,
+	tlipolicy varchar(4) NOT NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE lookup.policymapping (
+	tlpplancode text NOT NULL,
+	tlipolicy text NOT NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE lookup.smi (
+	tlpplancode varchar(10) NOT NULL,
+	tlipolicy varchar(4) NOT NULL,
+	mop varchar(1) NOT NULL,
+	tlpplan varchar(1) NOT NULL,
+	tliplan varchar(1) NOT NULL,
+	coverage varchar(4) NOT NULL,
+	ridertype varchar(4) NOT NULL,
+	benefit numeric(11,2) NOT NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE lookup.tlppolicystatus (
+	customerstatus text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+/*
+CREATE TABLE tlp.appbeneficiary (
+	appno text NULL,
+	seqno text NULL,
+	beneficiaryname text NULL,
+	relationship text NULL,
+	percentage text NULL,
+	age text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
 
 CREATE TABLE tlp.appjuvenile(
 	appno text NULL,
@@ -1204,23 +1447,7 @@ WITH (
 ) ;		
 
 
-CREATE TABLE tlp.historystatus(
-	historycode text NULL,
-	policyno text NULL,
-	createdate text NULL,
-	username text NULL,
-	statusdate text NULL,
-	status text NULL,
-	statusremark text NULL,
-	statusdescription text NULL,
-	statusnew text NULL,
-	statusnewremark text NULL,
-	statusold text NULL,
-	statusoldremark text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;		
+	
 
 CREATE TABLE tlp.loanpayoff(
 	lp_count text NULL,
@@ -1427,19 +1654,7 @@ WITH (
 ) ;
 
 
-CREATE TABLE tlp.policybeneficiary (
- policyno text NULL,
- seqno text NULL,
- beneficiaryprename text NULL,
- beneficiaryname text NULL,
- beneficiarylastname text NULL,
- relationship text NULL,
- percentage text NULL,
- age text NULL
-)
-WITH (
- OIDS=FALSE
-) ;
+
 
 
 CREATE TABLE tlp.policycustomerreceive(
@@ -1459,116 +1674,7 @@ CREATE TABLE tlp.policycustomerreceive(
 WITH (
 	OIDS=FALSE
 ) ;	
-
-CREATE TABLE tlp.policymaster (
-	customercode text NULL,
-	policyno text NULL,
-	appno text NULL,
-	plancode text NULL,
-	planname text NULL,
-	prename text NULL,
-	frstname text NULL,
-	surname text NULL,
-	statusnew text NULL,
-	statusnewremark text NULL,
-	statusold text NULL,
-	statusoldremark text NULL,
-	sex text NULL,
-	medical text NULL,
-	class text NULL,
-	occtype text NULL,
-	extramort text NULL,
-	issuedage text NULL,
-	sa text NULL,
-	premlife text NULL,
-	premacc text NULL,
-	premexta text NULL,
-	premtotal text NULL,
-	mode text NULL,
-	payperiod text NULL,
-	covperiod text NULL,
-	effectivedate text NULL,
-	birthdate text NULL,
-	paymentdate text NULL,
-	nextduedate text NULL,
-	modifydate text NULL,
-	statusdate text NULL,
-	matdate text NULL,
-	expdate text NULL,
-	dateprintpolicy text NULL,
-	issuepolicydate text NULL,
-	idno text NULL,
-	stopdate text NULL,
-	stopreason text NULL,
-	deathdate text NULL,
-	receivefreelookdate text NULL,
-	receivefreelookdescription text NULL,
-	receivefreelookrealdate text NULL,
-	prefix text NULL,
-	sanew text NULL,
-	expdatenew text NULL,
-	cashexpire text NULL,
-	cashimmediate text NULL,
-	book text NULL,
-	tesco text NULL,
-	nocount text NULL,
-	bookpredic text NULL,
-	tescopredic text NULL,
-	sendstatus text NULL,
-	sendgiftdate text NULL,
-	userconfirm text NULL,
-	registermailtesco text NULL,
-	receivetescodate text NULL,
-	receivetescostatus text NULL,
-	receivetescoreason text NULL,
-	uploadxo text NULL,
-	extrarate text NULL,
-	effectivedateold text NULL,
-	matdateold text NULL,
-	expdateold text NULL,
-	issuedageold text NULL,
-	cv text NULL,
-	cvdate text NULL,
-	status2 text NULL,
-	statusdate2 text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
-
-CREATE TABLE tlp.policypaid(
-	receiptno text NULL,
-	policyno text NULL,
-	seqno text NULL,
-	paiddate text NULL,
-	duedate text NULL,
-	nextduedate text NULL,
-	paidprem text NULL,
-	numberpay text NULL,
-	branchpay text NULL,
-	bankpay text NULL,
-	typepay text NULL,
-	yearpay text NULL,
-	paycount text NULL,
-	createdate text NULL,
-	cheqdate text NULL,
-	typecustomer text NULL,
-	username text NULL,
-	importby text NULL,
-	receiptstatus text NULL,
-	receiptdescription text NULL,
-	mode text NULL,
-	todate text NULL,
-	monthpay text NULL, 
-	premtotal text NULL,
-	descriptiondate text NULL,
-	partnersend text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;	
+	
 
 
 CREATE TABLE tlp.policypaidrefund(
@@ -1578,30 +1684,6 @@ CREATE TABLE tlp.policypaidrefund(
 	createdate text NULL,
 	username text NULL,
 	fee text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;	
-
-CREATE TABLE tlp.policyrider(
-	riderno text NULL,
-	policyno text NULL,
-	plancode text NULL,
-	statusnew text NULL,
-	statusold text NULL,
-	sa text NULL,
-	premrider text NULL,
-	premextra text NULL,
-	premtotal text NULL,
-	mode text NULL,
-	covperiod text NULL,
-	effectivedate text NULL,
-	startdate text NULL,
-	expdate text NULL,
-	issuedage text NULL,
-	attage text NULL,
-	statusdate text NULL,
-	endorsedate text NULL
 )
 WITH (
 	OIDS=FALSE
@@ -2817,3 +2899,4 @@ CREATE TABLE tlp.claimpayment(
 WITH (
 	OIDS=FALSE
 ) ;
+*/

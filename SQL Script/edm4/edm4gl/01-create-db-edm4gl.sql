@@ -530,7 +530,7 @@ CREATE TABLE dm.ords(
 	ridersum text NULL,
 	riderpay text NULL,
 	payrate text NULL,
-	causetype text NULL,
+	causetype text NULL
 
 )
 WITH (
@@ -593,7 +593,7 @@ CREATE TABLE dm.hospital(
     automate text NULL,
     isstricthospital text NULL,
 	recorddate text NULL,
-    recordid text NULL,
+    recordid text NULL
 
 )
 WITH (

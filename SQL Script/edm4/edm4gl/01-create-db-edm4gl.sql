@@ -33,6 +33,164 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+
+CREATE TABLE dm.address (
+	addressid text NULL,
+	address text NULL,
+	tumbon text NULL,
+	zipcode text NULL,
+	startdate text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.ordmast (
+	policyno text NULL,
+	nameid text NULL,
+	branch text NULL,
+	salesid text NULL,
+	occupationtype text NULL,
+	occupationcode text NULL,
+	plancode text NULL,
+	effectivedate text NULL,
+	policystatus1 text NULL,
+	policystatus2 text NULL,
+	policystatusdate1 text NULL,
+	policystatusdate2 text NULL,
+	oldpolicystatus1 text NULL,
+	oldpolicystatus2 text NULL,
+	oldpolicystatusdate1 text NULL,
+	oldpolicystatusdate2 text NULL,
+	insuredage text NULL,
+	sum text NULL,
+	lifepremium text NULL,
+	mode text NULL,
+	payperiod text NULL,
+	rpno text NULL,
+	paydate text NULL,
+	duedate text NULL,
+	remark text NULL,
+	planpa text NULL,
+	hivflag text NULL,
+	lapseflag text NULL,
+	tabianlapseflag text NULL,
+	medical text NULL,
+	class text NULL,
+	benefitrate text NULL,
+	contactaddressid text NULL,
+	contactstartdate text NULL,
+	localaddressid text NULL,
+	invalid text NULL,
+	saleschannel text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.rider (
+	policyno text NULL,
+	ridertype text NULL,
+	ridersum text NULL,
+	riderpremium text NULL,
+	riderstatus text NULL,
+	riderstatusdate text NULL,
+	effectivedate text NULL,
+	marker text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.orctrl (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.rprider (
+	rpno text NULL,
+	seqno text NULL,
+	ridertext text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.extrapremium (
+	policyno text NULL,
+	extratype text NULL,
+	startyear text NULL,
+	noofyear text NULL,
+	startdate text NULL,
+	extrapremium text NULL,
+	mode text NULL,
+	emrate text NULL,
+	epfromem text NULL,
+	epunderwrt text NULL	
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.remark (
+	policyno text NULL,
+	department text NULL,
+	sequence text NULL,
+	message text Null
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm."name" (
+	nameid text NULL,
+	personid text NULL,
+	prename text NULL,
+	firstname text NULL,
+	lastname text NULL,
+	startdate text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.person (
+	personid text NULL,
+	referenceid text NULL,
+	referencetype text NULL,
+	birthdate text NULL,
+	sex text NULL,
+	customerid text NULL,
+	bluecard text NULL,
+	reserve text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+
 CREATE TABLE dm.claim(
 	claimtype text NULL,
 	msttype text NULL,
@@ -441,6 +599,181 @@ CREATE TABLE dm.hospital(
 WITH (
 	OIDS=FALSE
 ) ;
+
+CREATE TABLE tlitext.beneficiary 
+(
+	policytype text,
+	policyno text,
+	sequence text,
+	prename text,
+	firstname text,
+	lastname text,
+	relationshipcode text,
+	percentshare text,
+	personflag text,
+	idno text,
+	birthdate text
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE tlitext.address (
+	addressid text NULL,
+	address text NULL,
+	tumbon text NULL,
+	zipcode text NULL,
+	startdate text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.ordmast (
+	policyno text NULL,
+	nameid text NULL,
+	branch text NULL,
+	salesid text NULL,
+	occupationtype text NULL,
+	occupationcode text NULL,
+	plancode text NULL,
+	effectivedate text NULL,
+	policystatus1 text NULL,
+	policystatus2 text NULL,
+	policystatusdate1 text NULL,
+	policystatusdate2 text NULL,
+	oldpolicystatus1 text NULL,
+	oldpolicystatus2 text NULL,
+	oldpolicystatusdate1 text NULL,
+	oldpolicystatusdate2 text NULL,
+	insuredage text NULL,
+	sum text NULL,
+	lifepremium text NULL,
+	mode text NULL,
+	payperiod text NULL,
+	rpno text NULL,
+	paydate text NULL,
+	duedate text NULL,
+	remark text NULL,
+	planpa text NULL,
+	hivflag text NULL,
+	lapseflag text NULL,
+	tabianlapseflag text NULL,
+	medical text NULL,
+	class text NULL,
+	benefitrate text NULL,
+	contactaddressid text NULL,
+	contactstartdate text NULL,
+	localaddressid text NULL,
+	invalid text NULL,
+	saleschannel text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.rider (
+	policyno text NULL,
+	ridertype text NULL,
+	ridersum text NULL,
+	riderpremium text NULL,
+	riderstatus text NULL,
+	riderstatusdate text NULL,
+	effectivedate text NULL,
+	marker text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.rprider (
+	rpno text NULL,
+	seqno text NULL,
+	ridertext text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.extrapremium (
+	policyno text NULL,
+	extratype text NULL,
+	startyear text NULL,
+	noofyear text NULL,
+	startdate text NULL,
+	extrapremium text NULL,
+	mode text NULL,
+	emrate text NULL,
+	epfromem text NULL,
+	epunderwrt text NULL	
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.remark (
+	policyno text NULL,
+	department text NULL,
+	sequence text NULL,
+	message text Null
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext."name" (
+	nameid text NULL,
+	personid text NULL,
+	prename text NULL,
+	firstname text NULL,
+	lastname text NULL,
+	startdate text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.person (
+	personid text NULL,
+	referenceid text NULL,
+	referencetype text NULL,
+	birthdate text NULL,
+	sex text NULL,
+	customerid text NULL,
+	bluecard text NULL,
+	reserve text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 
 CREATE TABLE tlitext.claim(
 	claimtype text NULL,

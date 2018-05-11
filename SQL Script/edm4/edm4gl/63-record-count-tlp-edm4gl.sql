@@ -1,10 +1,10 @@
-select count(0) from tlp.appcustomer;
-select count(0) from tlp.appcustomeraddress;
-select count(0) from tlp.historystatus;
-select count(0) from tlp.policybeneficiary;
-select count(0) from tlp.policymaster;
-select count(0) from tlp.policypaid;
-select count(0) from tlp.policyrider;
+select count(0) AS appcustomer from tlp.appcustomer;
+select count(0) AS appcustomeraddress from tlp.appcustomeraddress;
+select count(0) AS historystatus from tlp.historystatus;
+select count(0) AS policybeneficiary from tlp.policybeneficiary;
+select count(0) AS policymaster from tlp.policymaster;
+select count(0) AS policypaid from tlp.policypaid;
+select count(0) AS policyrider from tlp.policyrider;
 select count(0) AS masproduct from tlp.masproduct;
 select count(0) AS masproductcoverage from tlp.masproductcoverage;
 select count(0) AS masproductcoverageclaim from tlp.masproductcoverageclaim;

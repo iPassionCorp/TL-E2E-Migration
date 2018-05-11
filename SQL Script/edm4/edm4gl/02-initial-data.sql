@@ -109,7 +109,7 @@ insert into lookup.smi values('01026026','PT19','M','3','3','LIFE','PT19','10000
 insert into lookup.smi values('01026026','C17','M','3','3','CI','C17','500000');
 insert into lookup.smi values('01026026','C18','M','3','3','CB','C18','500000');
 insert into lookup.smi values('01026026','C06','M','3','3','CS','C06','100000');
-insert into lookup.smi values('1026028','PT19','A','3','3','LIFE','PT19','100000');
+insert into lookup.smi values('01026028','PT19','A','3','3','LIFE','PT19','100000');
 insert into lookup.smi values('01026028','C17','A','3','3','CI','C17','500000');
 insert into lookup.smi values('01026028','C18','A','3','3','CB','C18','500000');
 insert into lookup.smi values('01026028','C06','A','3','3','CS','C06','100000');

@@ -8,6 +8,7 @@ select count(0) AS policyrider from tlp.policyrider;
 select count(0) AS masproduct from tlp.masproduct;
 select count(0) AS masproductcoverage from tlp.masproductcoverage;
 select count(0) AS masproductcoverageclaim from tlp.masproductcoverageclaim;
+select count(0) AS masrisktype from tlp.masrisktype;
 select count(0) AS claimpayment from tlp.claimpayment;
 select count(0) AS claimpaymentdetail from tlp.claimpaymentdetail;
 select count(0) AS claimregisterdetail from tlp.claimregisterdetail;

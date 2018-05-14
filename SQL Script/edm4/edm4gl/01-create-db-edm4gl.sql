@@ -1700,6 +1700,13 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE tlp.masrisktype (
+	risktypeseq text NULL,
+	risktypename text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
 
 CREATE TABLE lookup.migratedate (
 	policyno text NOT NULL,
@@ -3282,13 +3289,6 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE tlp.masrisktype (
-	risktypeseq text NULL,
-	risktypename text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
 
 CREATE TABLE tlp.claimregisterheader(
 	registerseq text NULL, 

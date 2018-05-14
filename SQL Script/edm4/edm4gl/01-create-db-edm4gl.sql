@@ -2997,6 +2997,14 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE tlp.masrisktype (
+	risktypeseq text NULL,
+	risktypename text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 CREATE TABLE tlp.claimregisterheader(
 	registerseq text NULL, 
 	regcustomerbranchname text NULL, 

@@ -1180,16 +1180,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE tlp.customerballoon (
-	policyno text NULL,
-	certno text NULL,
-	policynoballoon text NULL,
-	certnobolloon text NULL,
-	loancontractno text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
+
 
 CREATE TABLE tlp.customerinfo (
 	productname text NULL,

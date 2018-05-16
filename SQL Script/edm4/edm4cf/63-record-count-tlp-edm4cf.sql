@@ -2,7 +2,6 @@ select count(0) AS count_claimpayment from tlp.claimpayment;
 select count(0) AS count_claimpaymentdetail from tlp.claimpaymentdetail; 
 select count(0) AS count_claimregisterdetail from tlp.claimregisterdetail; 
 select count(0) AS count_claimregisterheader from tlp.claimregisterheader; 
-select count(0) AS count_customerballoon from tlp.customerballoon; 
 select count(0) AS count_customerinfo from tlp.customerinfo; 
 select count(0) AS count_customersa from tlp.customersa; 
 select count(0) AS count_masproduct from tlp.masproduct; 

@@ -1422,11 +1422,18 @@ CREATE TABLE tlp.splitpremiumamount (
 	mapremium text NULL,
 	mcpremium text NULL,
 	mepremium text NULL,
-	hbpremium text NULL,
-	hapremium text NULL,
+	hbpremium text NULL,,
+	hapremium text NULL, 
 	hspremium text NULL,
+	icupremium text NULL,
+	cipremium text NULL,
+	fi_deathlum text NULL,
+	fi_tpdpremium text NULL,
+	ls_deathpremium text NULL,
+	ls_tpdpremium text NULL,
 	ddpremium text NULL,
-	lifetpdpremium text NULL
+	lifetpdpremium text NULL,
+	receiptno  text NULL
 )
 WITH (
 	OIDS=FALSE

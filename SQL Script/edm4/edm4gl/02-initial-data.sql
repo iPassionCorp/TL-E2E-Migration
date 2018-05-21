@@ -1,9 +1,13 @@
+
+DELETE FROM lookup.tlppolicystatus;
 INSERT INTO lookup.tlppolicystatus (customerstatus) VALUES 
 ('Surrender')
 ,('Expired')
 ,('Cancel (Void)')
 ,('Active')
 ,('Death');
+
+DELETE FROM lookup.smi;
 
 insert into lookup.smi values('01026022','PT19','A','1','1','LIFE','PT19','40000');
 insert into lookup.smi values('01026022','C17','A','1','1','CI','C17','200000');
@@ -245,3 +249,5 @@ insert into lookup.smi values('01026029','PT20','M','3','3','LIFE','PT20','10000
 insert into lookup.smi values('01026029','C19','M','3','3','CI','C19','500000');
 insert into lookup.smi values('01026029','C20','M','3','3','CP','C20','500000');
 insert into lookup.smi values('01026029','C06','M','3','3','CS','C06','100000');
+
+COMMIT;

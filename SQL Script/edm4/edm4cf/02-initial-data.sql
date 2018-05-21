@@ -1,4 +1,6 @@
 
+DELETE from lookup.tlppolicystatus;
+
 INSERT INTO lookup.tlppolicystatus (customerstatus) VALUES 
 ('Surrender')
 ,('Expired')
@@ -6,6 +8,8 @@ INSERT INTO lookup.tlppolicystatus (customerstatus) VALUES
 ,('Active')
 ,('Death')
 ;
+
+DELETE from lookup.smi;
 
 insert into lookup.smi values('01026007','PT05','M','1','1','LIFE','PT05','50000');
 insert into lookup.smi values('01026007','PT05','M','1','1','TPD','P67','50000');
@@ -1758,92 +1762,6 @@ insert into lookup.smi values('01006022','****','M','7','*','HA','****','1000');
 insert into lookup.smi values('BC01600600','****','A','1','*','LIFE','****','30000');
 insert into lookup.smi values('BC01600600','****','A','1','*','TD','****','1000');
 insert into lookup.smi values('BC01600600','****','A','1','*','ADD','****','20000');
-insert into lookup.smi values('00016001','****','A','1','*','LIFE','****','10000');
-insert into lookup.smi values('00016001','****','A','1','*','TPD','****','10000');
-insert into lookup.smi values('00016001','****','A','1','*','TD','****','500');
-insert into lookup.smi values('00016001','****','A','1','*','ADD','****','5000');
-insert into lookup.smi values('00016002','****','A','2','*','LIFE','****','30000');
-insert into lookup.smi values('00016002','****','A','2','*','TPD','****','30000');
-insert into lookup.smi values('00016002','****','A','2','*','TD','****','1000');
-insert into lookup.smi values('00016002','****','A','2','*','ADD','****','10000');
-insert into lookup.smi values('00016003','****','A','3','*','LIFE','****','50000');
-insert into lookup.smi values('00016003','****','A','3','*','TPD','****','50000');
-insert into lookup.smi values('00016003','****','A','3','*','TD','****','1000');
-insert into lookup.smi values('00016003','****','A','3','*','ADD','****','50000');
-insert into lookup.smi values('00016003','****','A','3','*','AME','****','5000');
-insert into lookup.smi values('00016004','****','A','4','*','LIFE','****','100000');
-insert into lookup.smi values('00016004','****','A','4','*','TPD','****','100000');
-insert into lookup.smi values('00016004','****','A','4','*','TD','****','2000');
-insert into lookup.smi values('00016004','****','A','4','*','ADD','****','100000');
-insert into lookup.smi values('00016004','****','A','4','*','AME','****','10000');
-insert into lookup.smi values('00016005','****','A','5','*','LIFE','****','200000');
-insert into lookup.smi values('00016005','****','A','5','*','TPD','****','200000');
-insert into lookup.smi values('00016005','****','A','5','*','TD','****','4000');
-insert into lookup.smi values('00016005','****','A','5','*','ADD','****','200000');
-insert into lookup.smi values('00016005','****','A','5','*','AME','****','15000');
-insert into lookup.smi values('00016006','****','A','1','*','LIFE','****','10000');
-insert into lookup.smi values('00016006','****','A','1','*','TPD','****','10000');
-insert into lookup.smi values('00016006','****','A','1','*','TD','****','500');
-insert into lookup.smi values('00016006','****','A','1','*','ADD','****','5000');
-insert into lookup.smi values('00016007','****','A','2','*','LIFE','****','30000');
-insert into lookup.smi values('00016007','****','A','2','*','TPD','****','30000');
-insert into lookup.smi values('00016007','****','A','2','*','TD','****','1000');
-insert into lookup.smi values('00016007','****','A','2','*','ADD','****','10000');
-insert into lookup.smi values('00016008','****','A','3','*','LIFE','****','50000');
-insert into lookup.smi values('00016008','****','A','3','*','TPD','****','50000');
-insert into lookup.smi values('00016008','****','A','3','*','TD','****','1000');
-insert into lookup.smi values('00016008','****','A','3','*','ADD','****','50000');
-insert into lookup.smi values('00016008','****','A','3','*','AME','****','5000');
-insert into lookup.smi values('00016009','****','A','4','*','LIFE','****','100000');
-insert into lookup.smi values('00016009','****','A','4','*','TPD','****','100000');
-insert into lookup.smi values('00016009','****','A','4','*','TD','****','2000');
-insert into lookup.smi values('00016009','****','A','4','*','ADD','****','100000');
-insert into lookup.smi values('00016009','****','A','4','*','AME','****','10000');
-insert into lookup.smi values('00016010','****','A','5','*','LIFE','****','200000');
-insert into lookup.smi values('00016010','****','A','5','*','TPD','****','200000');
-insert into lookup.smi values('00016010','****','A','5','*','TD','****','4000');
-insert into lookup.smi values('00016010','****','A','5','*','ADD','****','200000');
-insert into lookup.smi values('00016010','****','A','5','*','AME','****','15000');
-insert into lookup.smi values('00016011','****','A','4','*','LIFE','****','100000');
-insert into lookup.smi values('00016011','****','A','4','*','TPD','****','100000');
-insert into lookup.smi values('00016011','****','A','4','*','TD','****','2000');
-insert into lookup.smi values('00016011','****','A','4','*','ADD','****','100000');
-insert into lookup.smi values('00016011','****','A','4','*','AME','****','10000');
-insert into lookup.smi values('00016012','****','A','5','*','LIFE','****','200000');
-insert into lookup.smi values('00016012','****','A','5','*','TPD','****','200000');
-insert into lookup.smi values('00016012','****','A','5','*','TD','****','4000');
-insert into lookup.smi values('00016012','****','A','5','*','ADD','****','200000');
-insert into lookup.smi values('00016012','****','A','5','*','AME','****','15000');
-insert into lookup.smi values('00016013','****','A','4','*','LIFE','****','100000');
-insert into lookup.smi values('00016013','****','A','4','*','TPD','****','100000');
-insert into lookup.smi values('00016013','****','A','4','*','TD','****','2000');
-insert into lookup.smi values('00016013','****','A','4','*','ADD','****','100000');
-insert into lookup.smi values('00016013','****','A','4','*','AME','****','10000');
-insert into lookup.smi values('00016014','****','A','5','*','LIFE','****','200000');
-insert into lookup.smi values('00016014','****','A','5','*','TPD','****','200000');
-insert into lookup.smi values('00016014','****','A','5','*','TD','****','4000');
-insert into lookup.smi values('00016014','****','A','5','*','ADD','****','200000');
-insert into lookup.smi values('00016014','****','A','5','*','AME','****','15000');
-insert into lookup.smi values('00016015','****','A','4','*','LIFE','****','100000');
-insert into lookup.smi values('00016015','****','A','4','*','TPD','****','100000');
-insert into lookup.smi values('00016015','****','A','4','*','TD','****','2000');
-insert into lookup.smi values('00016015','****','A','4','*','ADD','****','100000');
-insert into lookup.smi values('00016015','****','A','4','*','AME','****','10000');
-insert into lookup.smi values('00016016','****','A','5','*','LIFE','****','200000');
-insert into lookup.smi values('00016016','****','A','5','*','TPD','****','200000');
-insert into lookup.smi values('00016016','****','A','5','*','TD','****','4000');
-insert into lookup.smi values('00016016','****','A','5','*','ADD','****','200000');
-insert into lookup.smi values('00016016','****','A','5','*','AME','****','15000');
-insert into lookup.smi values('00016017','****','A','4','*','LIFE','****','100000');
-insert into lookup.smi values('00016017','****','A','4','*','TPD','****','100000');
-insert into lookup.smi values('00016017','****','A','4','*','TD','****','2000');
-insert into lookup.smi values('00016017','****','A','4','*','ADD','****','100000');
-insert into lookup.smi values('00016017','****','A','4','*','AME','****','10000');
-insert into lookup.smi values('00016018','****','A','5','*','LIFE','****','200000');
-insert into lookup.smi values('00016018','****','A','5','*','TPD','****','200000');
-insert into lookup.smi values('00016018','****','A','5','*','TD','****','4000');
-insert into lookup.smi values('00016018','****','A','5','*','ADD','****','200000');
-insert into lookup.smi values('00016018','****','A','5','*','AME','****','15000');
 insert into lookup.smi values('01026015','****','M','1','*','ADD','****','500000');
 insert into lookup.smi values('01026015','****','M','1','*','HA','****','1000');
 insert into lookup.smi values('01026015','****','M','2','*','ADD','****','750000');
@@ -1891,14 +1809,8 @@ insert into lookup.smi values('01026020','****','M','5','*','ADD','****','200000
 insert into lookup.smi values('01026020','****','M','5','*','AME','****','60000');
 insert into lookup.smi values('01026020','****','M','5','*','MC','****','1000000');
 insert into lookup.smi values('01026020','****','M','5','*','HA','****','6000');
-insert into lookup.smi values('00026009','****','A','1','*','LIFE','****','100000');
-insert into lookup.smi values('00026009','****','A','1','*','TD','****','2000');
-insert into lookup.smi values('00026009','****','A','1','*','ADD','****','100000');
-insert into lookup.smi values('00026009','****','A','1','*','AME','****','10000');
-insert into lookup.smi values('00026010','****','A','1','*','LIFE','****','200000');
-insert into lookup.smi values('00026010','****','A','1','*','TD','****','4000');
-insert into lookup.smi values('00026010','****','A','1','*','ADD','****','100000');
-insert into lookup.smi values('00026010','****','A','1','*','AME','****','15000');
+insert into lookup.smi values('00026009','****','A','1','*','ADB','****','300000');
+insert into lookup.smi values('00026010','****','A','1','*','ADB','****','300000');
 insert into lookup.smi values('01026019','****','M','1','*','ADD','****','100000');
 insert into lookup.smi values('01026019','****','M','1','*','AME','****','15000');
 insert into lookup.smi values('01026019','****','M','1','*','HA','****','1000');
@@ -1914,3 +1826,4 @@ insert into lookup.smi values('01026019','****','M','4','*','HA','****','15000')
 insert into lookup.smi values('01026019','****','M','5','*','ADD','****','2000000');
 insert into lookup.smi values('01026019','****','M','5','*','AME','****','75000');
 insert into lookup.smi values('01026019','****','M','5','*','HA','****','2000');
+COMMIT;

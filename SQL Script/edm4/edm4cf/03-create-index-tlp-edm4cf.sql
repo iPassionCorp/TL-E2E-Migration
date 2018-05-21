@@ -15,11 +15,3 @@ CREATE INDEX IF NOT EXISTS indx_spa_01 ON splitpremiumamount (productid, grouppo
 CREATE INDEX IF NOT EXISTS indx_spa_02 ON splitpremiumamount (productid);
 CREATE INDEX IF NOT EXISTS indx_spa_03 ON splitpremiumamount (grouppolicyno);
 CREATE INDEX IF NOT EXISTS indx_spa_04 ON splitpremiumamount (customercode);
-
-
-CREATE INDEX IF NOT EXISTS indx_custballoon_01 ON customerballoon (policyno, certno, policynoballoon, certnobolloon, loancontractno);
-CREATE INDEX IF NOT EXISTS indx_custballoon_02 ON customerballoon (policyno);
-CREATE INDEX IF NOT EXISTS indx_custballoon_03 ON customerballoon (certno);
-CREATE INDEX IF NOT EXISTS indx_custballoon_04 ON customerballoon (policynoballoon);
-CREATE INDEX IF NOT EXISTS indx_custballoon_05 ON customerballoon (certnobolloon);
-CREATE INDEX IF NOT EXISTS indx_custballoon_06 ON customerballoon (loancontractno);

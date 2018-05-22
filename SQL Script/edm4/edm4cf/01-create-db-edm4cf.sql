@@ -1438,7 +1438,7 @@ CREATE TABLE tlp.splitpremiumamount (
 	mapremium text NULL,
 	mcpremium text NULL,
 	mepremium text NULL,
-	hbpremium text NULL,,
+	hbpremium text NULL,
 	hapremium text NULL, 
 	hspremium text NULL,
 	icupremium text NULL,

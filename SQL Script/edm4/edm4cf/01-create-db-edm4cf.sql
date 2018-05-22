@@ -481,6 +481,15 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE dm.tlpmigration (
+ customercode text NULL,
+ tlppolicyno text NULL,
+ tlpcertno text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 CREATE TABLE tlitext.compensateid (
 	compensateid text NULL,
 	referenceid text NULL

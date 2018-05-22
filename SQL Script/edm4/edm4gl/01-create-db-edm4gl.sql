@@ -603,11 +603,18 @@ WITH (
 CREATE TABLE dm.tlpmigration (
  customercode text NULL,
  tlppolicyno text NULL,
- tlpcertno text NULL
+ tlpcertno text NULL,
+ tlpplanno text NULL,
+ tlpproductname text NULL,
+ migrateplancode text NULL,
+ migrateplanno text NULL,
+ tmoplancode text NULL,
+ tmoplanno text NULL
 )
 WITH (
 	OIDS=FALSE
 ) ;
+
 
 CREATE TABLE tlitext.beneficiary 
 (

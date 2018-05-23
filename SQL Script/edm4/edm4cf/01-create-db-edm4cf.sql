@@ -1415,7 +1415,10 @@ CREATE TABLE tlp.payment (
 	monthenddate text NULL,
 	pay_date text NULL,
 	refund_amount text NULL,
-	collecteddate text NULL
+	collecteddate text null,
+	mode text NULL,
+	payperiod text NULL,
+	receiptno text NULL
 )
 WITH (
 	OIDS=FALSE
@@ -1449,6 +1452,7 @@ CREATE TABLE tlp.splitpremiumamount (
 	ls_tpdpremium text NULL,
 	ddpremium text NULL,
 	lifetpdpremium text NULL,
+	duedate text NULL,
 	receiptno  text NULL
 )
 WITH (

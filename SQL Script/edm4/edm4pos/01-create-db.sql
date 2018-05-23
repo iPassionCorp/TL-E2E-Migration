@@ -10,51 +10,51 @@ DROP SCHEMA IF EXISTS tlpktc CASCADE;
 CREATE SCHEMA tlpktc;
 
 CREATE TABLE tlpktc.billingheader (
-UTTX-REC-TYPE
-UTTX-SEQ
-UTTX-EFFECTIVE-DATE
-UTTX-FILE-DATE
-UTTX-MER-ID
-UTTX-MER-NAME
-UTTX-COMP-AC-NO
-UTTX-SERVICE-TYPE
-UTTX-BANK-CODE
-UTTX-REC-SIZE
-UTTX-FILE-TYPE
-FILLER
+	uttxrectype text NULL,
+	uttxseq text NULL,
+	uttxeffectivedate text NULL,
+	uttxfiledate text NULL,
+	uttxmerid text NULL,
+	uttxmername text NULL,
+	uttxcompacno text NULL,
+	uttxservicetype text NULL,
+	uttxbankcode text NULL,
+	uttxrecsize text NULL,
+	uttxfiletype text NULL,
+	filler text NULL
 )
 WITH (
 	OIDS=FALSE
 ) ;
 
 CREATE TABLE tlpktc.billingdetail (
-	uttx-rec-type text NULL,
-	uttx-seq text NULL,
-	uttx-pan text NULL,
-	uttx-cardholder-name text NULL,
-	uttx-trxn-amt text NULL,
-	uttx-refer-no-1 text NULL,
-	uttx-refer-no-2 text NULL,
-	uttx-trxn-type text NULL,
-	uttx-record-status text NULL,
-	uttx-output-result text NULL,
-	uttx-payment-date text NULL,
-	uttx-payment-time text NULL,
-	uttx-response-code text NULL,
-	uttx-auth-code text NULL,
-	expiry-date text NULL
+	uttxrectype text NULL,
+	uttxseq text NULL,
+	uttxpan text NULL,
+	uttxcardholdername text NULL,
+	uttxtrxnamt text NULL,
+	uttxreferno1 text NULL,
+	uttxreferno2 text NULL,
+	uttxtrxntype text NULL,
+	uttxrecordstatus text NULL,
+	uttxoutputresult text NULL,
+	uttxpaymentdate text NULL,
+	uttxpaymenttime text NULL,
+	uttxresponsecode text NULL,
+	uttxauthcode text NULL,
+	expirydate text NULL
 )
 WITH (
 	OIDS=FALSE
 ) ;
 
 CREATE TABLE tlpktc.billingfooter (
-	uttx-rec-type text NULL,
-	uttx-seq text NULL,
-	uttx-tot-db-amount text NULL,
-	uttx-no-db-item text NULL,
-	uttx-tot-cr-amount text NULL,
-	uttx-no-cr-item text NULL,
+	uttxrectype text NULL,
+	uttxseq text NULL,
+	uttxtotdbamount text NULL,
+	uttxnodbitem text NULL,
+	uttxtotcramount text NULL,
+	uttxnocritem text NULL,
 	filler text NULL
 )
 WITH (
@@ -62,17 +62,17 @@ WITH (
 ) ;
 
 CREATE TABLE tlpktc.paymentheader (
-	uttx-rec-type text NULL,
-	uttx-seq text NULL,
-	uttx-effective-date text NULL,
-	uttx-file-date text NULL,
-	uttx-mer-id text NULL,
-	uttx-mer-name text NULL,
-	uttx-comp-ac-no text NULL,
-	uttx-service-type text NULL,
-	uttx-bank-code text NULL,
-	uttx-rec-size text NULL,
-	uttx-file-type text NULL,
+	uttxrectype text NULL,
+	uttxseq text NULL,
+	uttxeffectivedate text NULL,
+	uttxfiledate text NULL,
+	uttxmerid text NULL,
+	uttxmername text NULL,
+	uttxcompacno text NULL,
+	uttxservicetype text NULL,
+	uttxbankcode text NULL,
+	uttxrecsize text NULL,
+	uttxfiletype text NULL,
 	filler text NULL
 )
 WITH (
@@ -80,37 +80,37 @@ WITH (
 ) ;
 
 CREATE TABLE tlpktc.paymentdetail (
-	uttx-rec-type text NULL,
-	uttx-seq text NULL,
-	uttx-pan text NULL,
-	uttx-cardholder-name text NULL,
-	uttx-trxn-amt text NULL,
-	uttx-refer-no-1 text NULL,
-	uttx-refer-no-2 text NULL,
-	uttx-trxn-type text NULL,
-	uttx-record-status text NULL,
-	uttx-output-result text NULL,
-	uttx-payment-date text NULL,
-	uttx-payment-time text NULL,
-	uttx-response-code text NULL,
-	uttx-auth-code text NULL,
-	expiry-date text NULL
+	uttxrectype text NULL,
+	uttxseq text NULL,
+	uttxpan text NULL,
+	uttxcardholdername text NULL,
+	uttxtrxnamt text NULL,
+	uttxreferno1 text NULL,
+	uttxreferno2 text NULL,
+	uttxtrxntype text NULL,
+	uttxrecordstatus text NULL,
+	uttxoutputresult text NULL,
+	uttxpaymentdate text NULL,
+	uttxpaymenttime text NULL,
+	uttxresponsecode text NULL,
+	uttxauthcode text NULL,
+	expirydate text NULL
 )
 WITH (
 	OIDS=FALSE
 ) ;
 
 CREATE TABLE tlpktc.paymentfooter (
-	uttx-rec-type text NULL,
-	uttx-seq text NULL,
-	uttx-tot-db-amount text NULL,
-	uttx-no-db-item text NULL,
-	uttx-tot-cr-amount text NULL,
-	uttx-no-cr-item text NULL,
-	uttx-tot-rej-db-amount text NULL,
-	uttx-no-rej-db-item text NULL,
-	uttx-tot-rej-cr-amount text NULL,
-	uttx-no-rej-cr-item text NULL,
+	uttxrectype text NULL,
+	uttxseq text NULL,
+	uttxtotdbamount text NULL,
+	uttxnodbitem text NULL,
+	uttxtotcramount text NULL,
+	uttxnocritem text NULL,
+	uttxtotrejdbamount text NULL,
+	uttxnorejdbitem text NULL,
+	uttxtotrejcramount text NULL,
+	uttxnorejcritem text NULL,
 	filler text NULL
 )
 WITH (

@@ -1488,7 +1488,7 @@ CREATE TABLE lookup.smi (
 	tlpplancode varchar(10) NOT NULL,
 	tlipolicy varchar(4) NOT NULL,
 	mop varchar(1) NOT NULL,
-	tlpplan varchar(1) NOT NULL,
+	tlpplan varchar(2) NOT NULL,
 	tliplan varchar(1) NOT NULL,
 	coverage varchar(4) NOT NULL,
 	ridertype varchar(4) NOT NULL,

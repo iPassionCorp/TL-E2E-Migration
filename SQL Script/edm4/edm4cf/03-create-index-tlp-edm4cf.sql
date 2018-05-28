@@ -1,3 +1,5 @@
+SET search_path TO tlp;
+
 CREATE INDEX IF NOT EXISTS indx_custinfo_01 ON customerinfo (policyno);
 CREATE INDEX IF NOT EXISTS indx_custinfo_02 ON customerinfo (certificateno);
 CREATE INDEX IF NOT EXISTS indx_custinfo_03 ON customerinfo (policyno, certificateno);

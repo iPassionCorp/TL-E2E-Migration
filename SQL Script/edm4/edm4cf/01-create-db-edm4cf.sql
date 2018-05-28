@@ -1292,7 +1292,11 @@ CREATE TABLE tlp.customerinfo (
 	informdate2 text NULL,
 	paydate2 text NULL,
 	amount2 text NULL,
-	deaddate text NULL
+	deaddate text null,	
+	lastpaydate text null,
+	lastreceiptno text null,
+	mode text null,
+	lastpayperiod text null
 )
 WITH (
 	OIDS=FALSE
@@ -1486,10 +1490,12 @@ WITH (
 
 CREATE TABLE lookup.smi (
 	tlpplancode varchar(10) NOT NULL,
+	migpolicy varchar(4) NOT NULL,
 	tlipolicy varchar(4) NOT NULL,
 	mop varchar(1) NOT NULL,
 	tlpplan varchar(2) NOT NULL,
-	tliplan varchar(1) NOT NULL,
+	migplan varchar(1) NOT NULL,
+	tliplan varchar(1) NOT NULL,	
 	coverage varchar(4) NOT NULL,
 	ridertype varchar(4) NOT NULL,
 	benefit numeric(11,2) NOT NULL

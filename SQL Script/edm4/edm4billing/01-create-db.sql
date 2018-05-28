@@ -38,8 +38,9 @@ CREATE TABLE tlpbilling.historyexport (
 	createdate text NULL,
 	responsecode text NULL,
 	exfileout text NULL,
-	exfilereturn text NULL
-
+	exfilereturn text NULL,
+	paiddate text NULL,
+	fileoutdate text NULL
 )
 WITH (
 	OIDS=FALSE
@@ -51,7 +52,8 @@ CREATE TABLE tlpbilling.historydownplan (
 	newproductcode  text NULL,
 	payperiod  text NULL,
 	newpremium  text NULL,
-	createdate  text NULL
+	createdate  text NULL,
+	status text NULL
 )
 WITH (
 	OIDS=FALSE

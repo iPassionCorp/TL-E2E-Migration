@@ -15,7 +15,8 @@ CREATE TABLE tlpbilling.membermaster (
 	cardno text NULL,
 	cardexpired text NULL,
 	effectivedate text NULL,
-	firstduedate text NULL
+	firstduedate text NULL,
+	mobile text NULL
 )
 WITH (
 	OIDS=FALSE
@@ -71,6 +72,22 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE tlpbilling.cancelrefund (
+	certno text NULL,
+	duedate text NULL,
+	transactiondate text NULL,
+	partial text NULL,
+	cancelreason2 text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
 
-
-
+CREATE TABLE tlpbilling.paidhistory (
+	certno text NULL,
+	duedate text NULL,
+	refundamount text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;

@@ -67,7 +67,9 @@ CREATE TABLE dm.policy (
 	"name" text NULL,
 	"type" text NULL,
 	effectivedate text NULL,
-	planname text NULL
+	planname text NULL,
+	riderplan text NULL,
+	tlbranch text NULL
 )
 WITH (
 	OIDS=FALSE
@@ -547,7 +549,9 @@ CREATE TABLE tlitext.policy (
 	"name" text NULL,
 	"type" text NULL,
 	effectivedate text NULL,
-	planname text NULL
+	planname text NULL,
+	riderplan text NULL,
+	tlbranch text NULL
 )
 WITH (
 	OIDS=FALSE

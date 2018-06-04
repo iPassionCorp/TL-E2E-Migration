@@ -37,12 +37,6 @@ CREATE INDEX IF NOT EXISTS indx_certrider_01 ON certrider (policyno, certno);
 CREATE INDEX IF NOT EXISTS indx_certrider_02 ON certrider (policyno);
 CREATE INDEX IF NOT EXISTS indx_certrider_03 ON certrider (certno);
 
-CREATE INDEX IF NOT EXISTS indx_clrctrl_01 ON clrctrl (rpno, policyno, certno, effectivedate);
-CREATE INDEX IF NOT EXISTS indx_clrctrl_02 ON clrctrl (rpno);
-CREATE INDEX IF NOT EXISTS indx_clrctrl_03 ON clrctrl (policyno);
-CREATE INDEX IF NOT EXISTS indx_clrctrl_04 ON clrctrl (certno);
-CREATE INDEX IF NOT EXISTS indx_clrctrl_05 ON clrctrl (effectivedate);
-
 CREATE INDEX IF NOT EXISTS indx_certmapping_01 ON certmapping (policyno, certno, rpolicyno, rcertno);
 CREATE INDEX IF NOT EXISTS indx_certmapping_02 ON certmapping (policyno, certno);
 CREATE INDEX IF NOT EXISTS indx_certmapping_03 ON certmapping (rpolicyno, rcertno);
@@ -56,19 +50,6 @@ CREATE INDEX IF NOT EXISTS indx_mgclaim_05 ON mgclaim (claimtype);
 CREATE INDEX IF NOT EXISTS indx_mgorder_01 ON mgorder (sectioncode, orderno);
 CREATE INDEX IF NOT EXISTS indx_mgorder_02 ON mgorder (sectioncode);
 CREATE INDEX IF NOT EXISTS indx_mgorder_03 ON mgorder (orderno);
-
-CREATE INDEX IF NOT EXISTS indx_mgcfpolicy_01 ON mgcfpolicy (certno, receivedate, accidentdate);
-CREATE INDEX IF NOT EXISTS indx_mgcfpolicy_02 ON mgcfpolicy (certno);
-CREATE INDEX IF NOT EXISTS indx_mgcfpolicy_03 ON mgcfpolicy (receivedate);
-CREATE INDEX IF NOT EXISTS indx_mgcfpolicy_04 ON mgcfpolicy (accidentdate);
-
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_01 ON mgcfpay (certno, receivedate, accidentdate, ridertype, period, organ);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_02 ON mgcfpay (certno);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_03 ON mgcfpay (receivedate);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_04 ON mgcfpay (accidentdate);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_05 ON mgcfpay (ridertype);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_06 ON mgcfpay (period);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_07 ON mgcfpay (organ);
 
 CREATE INDEX IF NOT EXISTS indx_mghis_01 ON mghis (certno, receivedate, accidentdate, claimtype, seqno);
 CREATE INDEX IF NOT EXISTS indx_mghis_02 ON mghis (certno);

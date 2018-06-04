@@ -210,7 +210,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE dm.rprider (
+CREATE TABLE dm.clrprider (
 	rpno text NULL,
 	ridertype text NULL,
 	riderpremium text NULL,
@@ -694,7 +694,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE tlitext.rprider (
+CREATE TABLE tlitext.clrprider (
 	rpno text NULL,
 	ridertype text NULL,
 	riderpremium text NULL,

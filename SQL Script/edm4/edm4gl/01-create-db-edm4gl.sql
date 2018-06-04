@@ -606,10 +606,12 @@ CREATE TABLE dm.tlpmigration (
  tlpcertno text NULL,
  tlpplanno text NULL,
  tlpproductname text NULL,
+ tlipolicyno text NULL,
  migrateplancode text NULL,
  migrateplanno text NULL,
  tmoplancode text NULL,
- tmoplanno text NULL
+ tmoplanno text NULL,
+ family text NULL
 )
 WITH (
 	OIDS=FALSE

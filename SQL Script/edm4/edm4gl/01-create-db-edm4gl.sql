@@ -740,6 +740,87 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE tlitext.rprider_old (
+	rpno text NULL,
+	seqno text NULL,
+	ridertext text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.rprider2552 (
+	rpno text NULL,
+	seqno text NULL,
+	ridertext text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.rprider2553 (
+	rpno text NULL,
+	seqno text NULL,
+	ridertext text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.rprider2554 (
+	rpno text NULL,
+	seqno text NULL,
+	ridertext text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.rprider2555 (
+	rpno text NULL,
+	seqno text NULL,
+	ridertext text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.rprider2556 (
+	rpno text NULL,
+	seqno text NULL,
+	ridertext text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.rprider2557 (
+	rpno text NULL,
+	seqno text NULL,
+	ridertext text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.rprider2558 (
+	rpno text NULL,
+	seqno text NULL,
+	ridertext text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.rprider2559 (
+	rpno text NULL,
+	seqno text NULL,
+	ridertext text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 CREATE TABLE tlitext.extrapremium (
 	policyno text NULL,
 	extratype text NULL,

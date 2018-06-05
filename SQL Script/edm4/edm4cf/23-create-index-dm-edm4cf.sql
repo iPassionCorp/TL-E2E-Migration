@@ -1,14 +1,5 @@
 SET search_path TO dm;
 
-CREATE INDEX IF NOT EXISTS indx_compensateid_01 ON compensateid (compensateid, referenceid);
-CREATE INDEX IF NOT EXISTS indx_compensateid_02 ON compensateid (compensateid);
-CREATE INDEX IF NOT EXISTS indx_compensateid_03 ON compensateid (referenceid);
-
-CREATE INDEX IF NOT EXISTS indx_customer_01 ON customer (customerid);
-CREATE INDEX IF NOT EXISTS indx_customer_02 ON customer (referenceid);
-CREATE INDEX IF NOT EXISTS indx_customer_03 ON customer (referencetype);
-CREATE INDEX IF NOT EXISTS indx_customer_04 ON customer (referenceid, referencetype);
-
 CREATE INDEX IF NOT EXISTS indx_name_01 ON name (nameid);
 CREATE INDEX IF NOT EXISTS indx_name_02 ON name (personid);
 CREATE INDEX IF NOT EXISTS indx_name_03 ON name (nameid, personid);
@@ -22,82 +13,115 @@ CREATE INDEX IF NOT EXISTS indx_person_06 ON person (customerid);
 CREATE INDEX IF NOT EXISTS indx_person_07 ON person (personid, customerid);
 CREATE INDEX IF NOT EXISTS indx_person_08 ON person (personid, referenceid, customerid);
 
-CREATE INDEX IF NOT EXISTS indx_policy_01 ON policy (policyno);
+CREATE INDEX IF NOT EXISTS indx_beneficiary_01 ON beneficiary (policytype);
+CREATE INDEX IF NOT EXISTS indx_beneficiary_02 ON beneficiary (policyno);
+CREATE INDEX IF NOT EXISTS indx_beneficiary_03 ON beneficiary (sequence);
+CREATE INDEX IF NOT EXISTS indx_beneficiary_04 ON beneficiary (policytype, policyno, sequence);
 
-CREATE INDEX IF NOT EXISTS indx_cert_01 ON cert (policyno, certno);
-CREATE INDEX IF NOT EXISTS indx_cert_02 ON cert (policyno);
-CREATE INDEX IF NOT EXISTS indx_cert_03 ON cert (certno);
-CREATE INDEX IF NOT EXISTS indx_cert_04 ON cert (nameid);
+CREATE INDEX IF NOT EXISTS indx_address_01 ON address (addressid);
 
-CREATE INDEX IF NOT EXISTS indx_detcert_01 ON detcert (policyno, certno);
-CREATE INDEX IF NOT EXISTS indx_detcert_02 ON detcert (policyno);
-CREATE INDEX IF NOT EXISTS indx_detcert_03 ON detcert (certno);
+CREATE INDEX IF NOT EXISTS indx_ordmast_01 ON ordmast (policyno);
+CREATE INDEX IF NOT EXISTS indx_ordmast_02 ON ordmast (nameid);
+CREATE INDEX IF NOT EXISTS indx_ordmast_03 ON ordmast (rpno);
+CREATE INDEX IF NOT EXISTS indx_ordmast_04 ON ordmast (policyno,nameid,rpno);
 
-CREATE INDEX IF NOT EXISTS indx_certrider_01 ON certrider (policyno, certno);
-CREATE INDEX IF NOT EXISTS indx_certrider_02 ON certrider (policyno);
-CREATE INDEX IF NOT EXISTS indx_certrider_03 ON certrider (certno);
+CREATE INDEX IF NOT EXISTS indx_rider_01 ON rider (policyno);
+CREATE INDEX IF NOT EXISTS indx_rider_02 ON rider (ridertype);
+CREATE INDEX IF NOT EXISTS indx_rider_03 ON rider (policyno, ridertype);
+/*
+CREATE INDEX IF NOT EXISTS indx_orctrl_01 ON (rpno);
+CREATE INDEX IF NOT EXISTS indx_orctrl_02 ON (policyno);
+CREATE INDEX IF NOT EXISTS indx_orctrl_03 ON (rpno,policyno);
 
-CREATE INDEX IF NOT EXISTS indx_clrctrl_01 ON clrctrl (rpno, policyno, certno, effectivedate);
-CREATE INDEX IF NOT EXISTS indx_clrctrl_02 ON clrctrl (rpno);
-CREATE INDEX IF NOT EXISTS indx_clrctrl_03 ON clrctrl (policyno);
-CREATE INDEX IF NOT EXISTS indx_clrctrl_04 ON clrctrl (certno);
-CREATE INDEX IF NOT EXISTS indx_clrctrl_05 ON clrctrl (effectivedate);
+CREATE INDEX IF NOT EXISTS indx_rprider_01 ON (rpno);
+CREATE INDEX IF NOT EXISTS indx_rprider_02 ON (seqno);
+CREATE INDEX IF NOT EXISTS indx_rprider_03 ON (rpno,seqno);*/
 
-CREATE INDEX IF NOT EXISTS indx_certmapping_01 ON certmapping (policyno, certno, rpolicyno, rcertno);
-CREATE INDEX IF NOT EXISTS indx_certmapping_02 ON certmapping (policyno, certno);
-CREATE INDEX IF NOT EXISTS indx_certmapping_03 ON certmapping (rpolicyno, rcertno);
+CREATE INDEX IF NOT EXISTS indx_extrapremium_01 ON extrapremium (policyno);
+CREATE INDEX IF NOT EXISTS indx_extrapremium_02 ON extrapremium (extratype);
+CREATE INDEX IF NOT EXISTS indx_extrapremium_03 ON extrapremium (startyear);
+CREATE INDEX IF NOT EXISTS indx_extrapremium_04 ON extrapremium (policyno,extratype,startyear);
 
-CREATE INDEX IF NOT EXISTS indx_mgclaim_01 ON mgclaim (certno, accidentdate, receivedate, claimtype);
-CREATE INDEX IF NOT EXISTS indx_mgclaim_02 ON mgclaim (certno);
-CREATE INDEX IF NOT EXISTS indx_mgclaim_03 ON mgclaim (accidentdate);
-CREATE INDEX IF NOT EXISTS indx_mgclaim_04 ON mgclaim (receivedate);
-CREATE INDEX IF NOT EXISTS indx_mgclaim_05 ON mgclaim (claimtype);
+CREATE INDEX IF NOT EXISTS indx_remark_01 ON remark (policyno);
+CREATE INDEX IF NOT EXISTS indx_remark_02 ON remark (department);
+CREATE INDEX IF NOT EXISTS indx_remark_03 ON remark (sequence);
+CREATE INDEX IF NOT EXISTS indx_remark_04 ON remark (policyno,department,sequence);
 
-CREATE INDEX IF NOT EXISTS indx_mgorder_01 ON mgorder (sectioncode, orderno);
-CREATE INDEX IF NOT EXISTS indx_mgorder_02 ON mgorder (sectioncode);
-CREATE INDEX IF NOT EXISTS indx_mgorder_03 ON mgorder (orderno);
+CREATE INDEX IF NOT EXISTS indx_claim_01 ON claim (claimtype);
+CREATE INDEX IF NOT EXISTS indx_claim_02 ON claim (msttype);
+CREATE INDEX IF NOT EXISTS indx_claim_03 ON claim (policyno);
+CREATE INDEX IF NOT EXISTS indx_claim_04 ON claim (claimtype,msttype,policyno);
 
-CREATE INDEX IF NOT EXISTS indx_mgcfpolicy_01 ON mgcfpolicy (certno, receivedate, accidentdate);
-CREATE INDEX IF NOT EXISTS indx_mgcfpolicy_02 ON mgcfpolicy (certno);
-CREATE INDEX IF NOT EXISTS indx_mgcfpolicy_03 ON mgcfpolicy (receivedate);
-CREATE INDEX IF NOT EXISTS indx_mgcfpolicy_04 ON mgcfpolicy (accidentdate);
+CREATE INDEX IF NOT EXISTS indx_eclm_01 ON eclm (sectioncode);
+CREATE INDEX IF NOT EXISTS indx_eclm_02 ON eclm (orderno);
+CREATE INDEX IF NOT EXISTS indx_eclm_03 ON eclm (claimtype);
+CREATE INDEX IF NOT EXISTS indx_eclm_04 ON eclm (sectioncode,orderno,claimtype);
 
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_01 ON mgcfpay (certno, receivedate, accidentdate, ridertype, period, organ);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_02 ON mgcfpay (certno);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_03 ON mgcfpay (receivedate);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_04 ON mgcfpay (accidentdate);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_05 ON mgcfpay (ridertype);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_06 ON mgcfpay (period);
-CREATE INDEX IF NOT EXISTS indx_mgcfpay_07 ON mgcfpay (organ);
+CREATE INDEX IF NOT EXISTS indx_dthordo_01 ON dthordo (policyno);
+CREATE INDEX IF NOT EXISTS indx_dthordo_02 ON dthordo (sectioncode);
+CREATE INDEX IF NOT EXISTS indx_dthordo_03 ON dthordo (orderno);
+CREATE INDEX IF NOT EXISTS indx_dthordo_04 ON dthordo (receivedate);
+CREATE INDEX IF NOT EXISTS indx_dthordo_05 ON dthordo (accidentdate);
+CREATE INDEX IF NOT EXISTS indx_dthordo_06 ON dthordo (policyno, sectioncode, orderno);
 
-CREATE INDEX IF NOT EXISTS indx_mghis_01 ON mghis (certno, receivedate, accidentdate, claimtype, seqno);
-CREATE INDEX IF NOT EXISTS indx_mghis_02 ON mghis (certno);
-CREATE INDEX IF NOT EXISTS indx_mghis_03 ON mghis (receivedate);
-CREATE INDEX IF NOT EXISTS indx_mghis_04 ON mghis (accidentdate);
-CREATE INDEX IF NOT EXISTS indx_mghis_05 ON mghis (claimtype);
-CREATE INDEX IF NOT EXISTS indx_mghis_06 ON mghis (seqno);
+CREATE INDEX IF NOT EXISTS indx_ridordo_01 ON ridordo (policyno);
+CREATE INDEX IF NOT EXISTS indx_ridordo_02 ON ridordo (receivedate);
+CREATE INDEX IF NOT EXISTS indx_ridordo_03 ON ridordo (ridertype);
+CREATE INDEX IF NOT EXISTS indx_ridordo_04 ON ridordo (policyno,receivedate,ridertype);
 
-CREATE INDEX IF NOT EXISTS indx_mginsmemo_01 ON mginsmemo (certno, receivedate, accidentdate, memocode);
-CREATE INDEX IF NOT EXISTS indx_mginsmemo_02 ON mginsmemo (certno);
-CREATE INDEX IF NOT EXISTS indx_mginsmemo_03 ON mginsmemo (receivedate);
-CREATE INDEX IF NOT EXISTS indx_mginsmemo_04 ON mginsmemo (accidentdate);
-CREATE INDEX IF NOT EXISTS indx_mginsmemo_05 ON mginsmemo (memocode);
+CREATE INDEX IF NOT EXISTS indx_dhsordo_01 ON dhsordo (policyno);
+CREATE INDEX IF NOT EXISTS indx_dhsordo_02 ON dhsordo (seqno);
+CREATE INDEX IF NOT EXISTS indx_dhsordo_03 ON dhsordo (receivedate);
+CREATE INDEX IF NOT EXISTS indx_dhsordo_04 ON dhsordo (policyno, seqno,receivedate);
 
-CREATE INDEX IF NOT EXISTS indx_mginterest_01 ON mginterest (certno, receivedate, accidentdate, ridertype, paytype);
-CREATE INDEX IF NOT EXISTS indx_mginterest_02 ON mginterest (certno);
-CREATE INDEX IF NOT EXISTS indx_mginterest_03 ON mginterest (receivedate);
-CREATE INDEX IF NOT EXISTS indx_mginterest_04 ON mginterest (accidentdate);
-CREATE INDEX IF NOT EXISTS indx_mginterest_05 ON mginterest (ridertype);
-CREATE INDEX IF NOT EXISTS indx_mginterest_06 ON mginterest (paytype);
+CREATE INDEX IF NOT EXISTS indx_bnfordo_01 ON bnfordo (policyno);
+CREATE INDEX IF NOT EXISTS indx_bnfordo_02 ON bnfordo (seqno);
+CREATE INDEX IF NOT EXISTS indx_bnfordo_03 ON bnfordo (receivedate);
+CREATE INDEX IF NOT EXISTS indx_bnfordo_04 ON bnfordo (policyno,seqno,receivedate);
 
-CREATE INDEX IF NOT EXISTS indx_mgreceiver_01 ON mgreceiver (certno, receivedate, accidentdate, seqno);
-CREATE INDEX IF NOT EXISTS indx_mgreceiver_02 ON mgreceiver (certno);
-CREATE INDEX IF NOT EXISTS indx_mgreceiver_03 ON mgreceiver (receivedate);
-CREATE INDEX IF NOT EXISTS indx_mgreceiver_04 ON mgreceiver (accidentdate);
-CREATE INDEX IF NOT EXISTS indx_mgreceiver_05 ON mgreceiver (seqno);
+CREATE INDEX IF NOT EXISTS indx_oacm_01 ON oacm (policyno);
+CREATE INDEX IF NOT EXISTS indx_oacm_02 ON oacm (sectioncode);
+CREATE INDEX IF NOT EXISTS indx_oacm_03 ON oacm (orderno);
+CREATE INDEX IF NOT EXISTS indx_oacm_04 ON oacm (accidentdate);
+CREATE INDEX IF NOT EXISTS indx_oacm_05 ON oacm (receivedate);
+CREATE INDEX IF NOT EXISTS indx_oacm_06 ON oacm (policyno, sectioncode, orderno,accidentdate,receivedate);
 
-CREATE INDEX IF NOT EXISTS indx_queue_01 ON queue (considerid, queuetype, jobtype, jobCode);
-CREATE INDEX IF NOT EXISTS indx_queue_01 ON queue (considerid);
-CREATE INDEX IF NOT EXISTS indx_queue_01 ON queue (queuetype);
-CREATE INDEX IF NOT EXISTS indx_queue_01 ON queue (jobtype);
-CREATE INDEX IF NOT EXISTS indx_queue_01 ON queue (jobcode);
+CREATE INDEX IF NOT EXISTS indx_hordods_01 ON hordods (policyno);
+CREATE INDEX IF NOT EXISTS indx_hordods_02 ON hordods (seqno);
+CREATE INDEX IF NOT EXISTS indx_hordods_03 ON hordods (accidentdate);
+CREATE INDEX IF NOT EXISTS indx_hordods_04 ON hordods (receivedate);
+CREATE INDEX IF NOT EXISTS indx_hordods_05 ON hordods (policyno,seqno,accidentdate,receivedate);
+
+CREATE INDEX IF NOT EXISTS indx_pay_01 ON pay (sectioncode);
+CREATE INDEX IF NOT EXISTS indx_pay_02 ON pay (orderno);
+CREATE INDEX IF NOT EXISTS indx_pay_03 ON pay (paytype);
+CREATE INDEX IF NOT EXISTS indx_pay_04 ON pay (sectioncode, orderno, paytype);
+
+CREATE INDEX IF NOT EXISTS indx_insmemo_01 ON insmemo (claimtype);
+CREATE INDEX IF NOT EXISTS indx_insmemo_02 ON insmemo (msttype);
+CREATE INDEX IF NOT EXISTS indx_insmemo_03 ON insmemo (policyno);
+CREATE INDEX IF NOT EXISTS indx_insmemo_04 ON insmemo (accidentdate);
+CREATE INDEX IF NOT EXISTS indx_insmemo_05 ON insmemo (receivedate);
+CREATE INDEX IF NOT EXISTS indx_insmemo_06 ON insmemo (claimtype, msttype, policyno,accidentdate,receivedate);
+
+CREATE INDEX IF NOT EXISTS indx_voiordo_01 ON voiordo (claimtype);
+CREATE INDEX IF NOT EXISTS indx_voiordo_02 ON voiordo (policyno);
+CREATE INDEX IF NOT EXISTS indx_voiordo_03 ON voiordo (accidentdate);
+CREATE INDEX IF NOT EXISTS indx_voiordo_04 ON voiordo (receivedate);
+CREATE INDEX IF NOT EXISTS indx_voiordo_05 ON voiordo (claimtype,policyno,accidentdate,receivedate);
+
+CREATE INDEX IF NOT EXISTS indx_cmem_01 ON cmem (sectioncode);
+CREATE INDEX IF NOT EXISTS indx_cmem_02 ON cmem (orderno);
+CREATE INDEX IF NOT EXISTS indx_cmem_03 ON cmem (seqno);
+CREATE INDEX IF NOT EXISTS indx_cmem_04 ON cmem (sectioncode, orderno, seqno);
+
+CREATE INDEX IF NOT EXISTS indx_odis_01 ON odis (policyno);
+CREATE INDEX IF NOT EXISTS indx_odis_02 ON odis (accidentdate);
+CREATE INDEX IF NOT EXISTS indx_odis_03 ON odis (receivedate);
+CREATE INDEX IF NOT EXISTS indx_odis_04 ON odis (policyno, accidentdate, receivedate);
+
+CREATE INDEX IF NOT EXISTS indx_ords_01 ON ords (policyno);
+CREATE INDEX IF NOT EXISTS indx_ords_02 ON ords (accidentdate);
+CREATE INDEX IF NOT EXISTS indx_ords_03 ON ords (receivedate);
+CREATE INDEX IF NOT EXISTS indx_ords_04 ON ords (ridertype);
+CREATE INDEX IF NOT EXISTS indx_ords_05 ON ords (policyno,accidentdate,receivedate,ridertype);

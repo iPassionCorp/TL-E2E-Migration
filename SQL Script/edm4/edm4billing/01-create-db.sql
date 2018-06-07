@@ -77,7 +77,8 @@ CREATE TABLE tlpbilling.cancelrefund (
 	duedate text NULL,
 	transactiondate text NULL,
 	partial text NULL,
-	cancelreason2 text NULL
+	cancelreason2 text NULL,
+	type text NULL
 )
 WITH (
 	OIDS=FALSE

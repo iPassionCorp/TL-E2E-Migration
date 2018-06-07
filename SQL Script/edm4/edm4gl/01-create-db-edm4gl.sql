@@ -1852,6 +1852,968 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE tlitext.orctrl3333 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl9999 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl0000 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl0998 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl1111 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2528 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2529 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2530 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2531 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2532 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2533 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2534 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2535 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2536 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2537 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2538 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2539 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2540 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2541 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2542 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2543 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2544 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2545 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2546 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2547 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2548 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2549 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2550 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2551 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2552 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2553 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2554 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2555 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2556 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2557 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2558 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.orctrl2559 (
+	rpno text NULL,
+	policyno text NULL,
+	effectivedate text NULL,
+	payperiod text NULL,
+	paydate text NULL,
+	premium text NULL,
+	extraprem text NULL,
+	sysdate text NULL,
+	currentstatus text NULL,
+	originalstatus text NULL,
+	mode text NULL,
+	time text NULL,
+	requestdate text NULL,
+	submitno text NULL,
+	graceperiod text NULL,
+	printeddate text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	reasoncode text NULL,
+	moneyok text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 /*
 CREATE TABLE tlp.appbeneficiary (
 	appno text NULL,

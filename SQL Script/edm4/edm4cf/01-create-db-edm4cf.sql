@@ -1517,6 +1517,10 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE OR REPLACE VIEW lookup.tlpppi AS
+select tlpplancode from lookup.smi 
+where coverage = 'LIFE' and benefit = 0;
+
 CREATE TABLE lookup.tlppolicystatus (
 	customerstatus text NULL
 )

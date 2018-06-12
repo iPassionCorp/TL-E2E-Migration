@@ -500,6 +500,105 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE dm.creditmortgage(               
+	partnercode text NULL,
+	billingtype text NULL,
+	policyno text NULL,
+	cert text NULL,
+	policytype text NULL,
+	cardname text NULL,
+	cardtype text NULL,
+	merchantcode text NULL,
+	creditno text NULL,
+	relationtype text NULL,
+	ownername text NULL,
+	expiredate text NULL,
+	entrydate text NULL,
+	entrytime text NULL,
+	status text NULL,
+	statusdate text NULL,
+	userid text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE dm.partnerbilling(
+	partnercode text NULL,
+	partnerabb text NULL,
+	billingtype	text NULL,
+	billingdue text NULL,
+	billingdate text NULL,
+  	startduedate text NULL,
+  	lastduedate text NULL,
+  	status text NULL,
+  	transactiondate text NULL,
+  	type text NULL,
+  	userid	text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE dm.billingpost(
+	partnercode text NULL,
+	billingtype text NULL,
+	policyno text NULL,
+	cert text NULL,
+	policytype text NULL,
+	paystatus text NULL,
+	duedate text NULL,
+	payperiod text NULL,
+	postdate text NULL,
+	billingdate text NULL,
+	paymentdate text NULL,
+	premium text NULL,
+	mode text NULL,
+	status text NULL,
+	statusdate text NULL,
+	attemp text NULL,
+	attenpdate text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE dm.consumerhist(
+	partnercode text NULL,
+	billingtype text NULL,
+	policyno text NULL,
+	cert text NULL,
+	policytype text NULL,
+	seqno text NULL,
+	merchantcode text NULL,
+	paystatus text NULL,
+	duedate text NULL,
+	payperiod text NULL,
+	sysdate text NULL,
+	creditno text NULL,
+	ownername text NULL,
+	expireddate text NULL,
+	approvalcode text NULL,
+	billingdate text NULL,
+	paymentdate text NULL,
+	premium text NULL,
+	mode text NULL,
+	status text NULL,
+	statusdate text NULL,
+	responsecode text NULL,
+	responsedate text NULL,
+	attemp text NULL,
+	rpno text NULL,
+	submitno text NULL,
+	userid text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 
 CREATE TABLE tlitext.compensateid (
 	compensateid text NULL,
@@ -1343,14 +1442,7 @@ CREATE TABLE tlp.customersa (
 	sa_ma text NULL,
 	expiry_ma text NULL,
 	sa_mc text NULL,
-	expiry_mc text null,
-	sa_icu text NULL,
-	sa_fideath text NULL,
-	sa_fitpd text NULL,
-	sa_lsdeath text NULL,
-	sa_lstpd text NULL,
-	sa_cb text NULL,
-	sa_cp text NULL	
+	expiry_mc text NULL
 )
 WITH (
 	OIDS=FALSE
@@ -1516,10 +1608,6 @@ CREATE TABLE lookup.smi (
 WITH (
 	OIDS=FALSE
 ) ;
-
-CREATE OR REPLACE VIEW lookup.tlpppi AS
-select tlpplancode from lookup.smi 
-where coverage = 'LIFE' and benefit = 0;
 
 CREATE TABLE lookup.tlppolicystatus (
 	customerstatus text NULL

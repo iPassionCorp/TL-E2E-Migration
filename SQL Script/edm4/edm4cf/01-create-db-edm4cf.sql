@@ -9,11 +9,15 @@ DROP SCHEMA IF EXISTS tlp CASCADE;
 DROP SCHEMA IF EXISTS dm CASCADE;
 DROP SCHEMA IF EXISTS tlitext CASCADE;
 DROP SCHEMA IF EXISTS lookup CASCADE;
+DROP SCHEMA IF EXISTS claimconvert CASCADE;
+DROP SCHEMA IF EXISTS diff CASCADE;
 
 CREATE SCHEMA tlp;
 CREATE SCHEMA dm;
 CREATE SCHEMA tlitext;
 CREATE SCHEMA lookup;
+CREATE SCHEMA claimconvert;
+CREATE SCHEMA diff;
 
 CREATE TABLE dm.compensateid (
 	compensateid text NULL,
@@ -115,6 +119,7 @@ CREATE TABLE dm.cert (
 	reserve text NULL,
 	mode text NULL,
 	payperiod text NULL,
+	duedate text NULL,
 	rpno text NULL,
 	statdate1 text NULL,
 	oldstatcert1 text NULL,
@@ -122,7 +127,7 @@ CREATE TABLE dm.cert (
 	oldstatcertdate1 text NULL,
 	oldstatcertdate2 text NULL,
 	package text NULL,
-	duedate text NULL
+	familytype text NULL	
 )
 WITH (
 	OIDS=FALSE
@@ -697,6 +702,7 @@ CREATE TABLE tlitext.cert (
 	reserve text NULL,
 	mode text NULL,
 	payperiod text NULL,
+	duedate text NULL,
 	rpno text NULL,
 	statdate1 text NULL,
 	oldstatcert1 text NULL,
@@ -704,7 +710,8 @@ CREATE TABLE tlitext.cert (
 	oldstatcertdate1 text NULL,
 	oldstatcertdate2 text NULL,
 	package text NULL,
-	duedate text NULL
+	familytype text NULL	
+	
 )
 WITH (
 	OIDS=FALSE
@@ -1728,3 +1735,17 @@ CREATE TABLE lookup.tlppolicystatus (
 WITH (
 	OIDS=FALSE
 ) ;
+
+CREATE OR REPLACE VIEW diff.tlp_claim_convert AS
+select tlp.policyno, tlp.cnt as tlp, cc.cnt as claim_convert, tlp.cnt - cc.cnt as diff
+from
+(select policyno, count(0) as cnt
+from tlp.customerinfo
+where customerstatus in (select * from lookup.tlppolicystatus)
+group by policyno) tlp 
+left join 
+(select policyno, count(0) as cnt
+from claimconvert.customerinfo
+group by policyno) cc 
+on tlp.policyno = cc.policyno
+where tlp.cnt - cc.cnt <> 0;

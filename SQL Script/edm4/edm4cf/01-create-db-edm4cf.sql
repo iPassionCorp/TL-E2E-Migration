@@ -1736,7 +1736,7 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE OR REPLACE VIEW diff.tlp_claim_convert(customerinfo) AS
+CREATE OR REPLACE VIEW diff.tlp_claim_convert_custinfo AS
 select tlp.policyno, tlp.cnt, cc.cnt, tlp.cnt - cc.cnt as diff
 from
 (select policyno, count(0) as cnt
@@ -1751,7 +1751,7 @@ on tlp.policyno = cc.policyno
 where tlp.cnt - cc.cnt <> 0
 order by tlp.policyno
 
-CREATE OR REPLACE VIEW diff.tlp_claim_convert(payment) AS
+CREATE OR REPLACE VIEW diff.tlp_claim_convert_payment AS
 select tlp.policyno, tlp.cnt, cc.cnt, tlp.cnt - cc.cnt as diff
 from
 (select policyno, count(0) as cnt
@@ -1765,7 +1765,7 @@ on tlp.policyno = cc.policyno
 where tlp.cnt - cc.cnt <> 0
 order by tlp.policyno
 
-CREATE OR REPLACE VIEW diff.tlp_claim_convert(tcustomersa) AS
+CREATE OR REPLACE VIEW diff.tlp_claim_convert_custsa AS
 select tlp.policyno, tlp.cnt, cc.cnt, tlp.cnt - cc.cnt as diff
 from
 (select policyno, count(0) as cnt
@@ -1779,7 +1779,7 @@ on tlp.policyno = cc.policyno
 where tlp.cnt - cc.cnt <> 0
 order by tlp.policyno
 
-CREATE OR REPLACE VIEW diff.tlp_claim_convert(splitpremiumamount) AS
+CREATE OR REPLACE VIEW diff.tlp_claim_convert_split AS
 select tlp.grouppolicyno, tlp.cnt, cc.cnt, tlp.cnt - cc.cnt as diff
 from
 (select grouppolicyno, count(0) as cnt

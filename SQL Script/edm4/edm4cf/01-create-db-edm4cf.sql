@@ -1737,58 +1737,58 @@ WITH (
 ) ;
 
 CREATE OR REPLACE VIEW diff.tlp_claim_convert_custinfo AS
-select tlp.policyno, tlp.cnt, cc.cnt, tlp.cnt - cc.cnt as diff
+select tlp.policyno, tlp.tlp, cc.claim_convert, tlp.tlp - cc.claim_convert as diff
 from
-(select policyno, count(0) as cnt
+(select policyno, count(0) as tlp
 from tlp.customerinfo
 where customerstatus in (select * from lookup.tlppolicystatus)
 group by policyno) tlp 
 left join 
-(select policyno, count(0) as cnt
+(select policyno, count(0) as claim_convert
 from claimconvert.customerinfo
 group by policyno) cc 
 on tlp.policyno = cc.policyno
-where tlp.cnt - cc.cnt <> 0
+where tlp.tlp - cc.claim_convert <> 0
 order by tlp.policyno;
 
 CREATE OR REPLACE VIEW diff.tlp_claim_convert_payment AS
-select tlp.policyno, tlp.cnt, cc.cnt, tlp.cnt - cc.cnt as diff
+select tlp.policyno, tlp.tlp, cc.claim_convert, tlp.tlp - cc.claim_convert as diff
 from
-(select policyno, count(0) as cnt
+(select policyno, count(0) as tlp
 from tlp.payment
 group by policyno) tlp 
 left join 
-(select policyno, count(0) as cnt
+(select policyno, count(0) as claim_convert
 from claimconvert.payment
 group by policyno) cc 
 on tlp.policyno = cc.policyno
-where tlp.cnt - cc.cnt <> 0
+where tlp.tlp - cc.claim_convert <> 0
 order by tlp.policyno;
 
 CREATE OR REPLACE VIEW diff.tlp_claim_convert_custsa AS
-select tlp.policyno, tlp.cnt, cc.cnt, tlp.cnt - cc.cnt as diff
+select tlp.policyno, tlp.tlp, cc.claim_convert, tlp.tlp - cc.claim_convert as diff
 from
-(select policyno, count(0) as cnt
+(select policyno, count(0) as tlp
 from tlp.customersa
 group by policyno) tlp 
 left join 
-(select policyno, count(0) as cnt
+(select policyno, count(0) as claim_convert
 from claimconvert.customersa
 group by policyno) cc 
 on tlp.policyno = cc.policyno
-where tlp.cnt - cc.cnt <> 0
+where tlp.tlp - cc.claim_convert <> 0
 order by tlp.policyno;
 
 CREATE OR REPLACE VIEW diff.tlp_claim_convert_split AS
-select tlp.grouppolicyno, tlp.cnt, cc.cnt, tlp.cnt - cc.cnt as diff
+select tlp.grouppolicyno, tlp.tlp, cc.claim_convert, tlp.tlp - cc.claim_convert as diff
 from
-(select grouppolicyno, count(0) as cnt
+(select grouppolicyno, count(0) as tlp
 from tlp.splitpremiumamount
 group by grouppolicyno) tlp 
 left join 
-(select grouppolicyno, count(0) as cnt
+(select grouppolicyno, count(0) as claim_convert
 from claimconvert.splitpremiumamount
 group by grouppolicyno) cc 
 on tlp.grouppolicyno = cc.grouppolicyno
-where tlp.cnt - cc.cnt <> 0
+where tlp.tlp - cc.claim_convert <> 0
 order by tlp.grouppolicyno;

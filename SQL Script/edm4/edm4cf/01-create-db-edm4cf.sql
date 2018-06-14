@@ -1749,7 +1749,7 @@ from claimconvert.customerinfo
 group by policyno) cc 
 on tlp.policyno = cc.policyno
 where tlp.cnt - cc.cnt <> 0
-order by tlp.policyno
+order by tlp.policyno;
 
 CREATE OR REPLACE VIEW diff.tlp_claim_convert_payment AS
 select tlp.policyno, tlp.cnt, cc.cnt, tlp.cnt - cc.cnt as diff
@@ -1763,7 +1763,7 @@ from claimconvert.payment
 group by policyno) cc 
 on tlp.policyno = cc.policyno
 where tlp.cnt - cc.cnt <> 0
-order by tlp.policyno
+order by tlp.policyno;
 
 CREATE OR REPLACE VIEW diff.tlp_claim_convert_custsa AS
 select tlp.policyno, tlp.cnt, cc.cnt, tlp.cnt - cc.cnt as diff
@@ -1777,7 +1777,7 @@ from claimconvert.customersa
 group by policyno) cc 
 on tlp.policyno = cc.policyno
 where tlp.cnt - cc.cnt <> 0
-order by tlp.policyno
+order by tlp.policyno;
 
 CREATE OR REPLACE VIEW diff.tlp_claim_convert_split AS
 select tlp.grouppolicyno, tlp.cnt, cc.cnt, tlp.cnt - cc.cnt as diff
@@ -1791,4 +1791,4 @@ from claimconvert.splitpremiumamount
 group by grouppolicyno) cc 
 on tlp.grouppolicyno = cc.grouppolicyno
 where tlp.cnt - cc.cnt <> 0
-order by tlp.grouppolicyno
+order by tlp.grouppolicyno;

@@ -1736,16 +1736,48 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE OR REPLACE VIEW diff.tlp_claim_convert AS
-select tlp.policyno, tlp.cnt as tlp, cc.cnt as claim_convert, tlp.cnt - cc.cnt as diff
-from
-(select policyno, count(0) as cnt
-from tlp.customerinfo
-where customerstatus in (select * from lookup.tlppolicystatus)
-group by policyno) tlp 
-left join 
-(select policyno, count(0) as cnt
-from claimconvert.customerinfo
-group by policyno) cc 
-on tlp.policyno = cc.policyno
-where tlp.cnt - cc.cnt <> 0;
+CREATE OR REPLACE VIEW diff.tlp_claim_convert(customerinfo) AS
+select count(0) from (
+SELECT policyno
+FROM (
+SELECT a.policyno FROM tlp.customerinfo a 
+WHERE customerstatus IN (SELECT customerstatus FROM lookup.tlppolicystatus) )aa
+except all
+SELECT policyno
+FROM (
+SELECT a.policyno FROM claimconvert.customerinfo a 
+WHERE customerstatus IN (SELECT customerstatus FROM lookup.tlppolicystatus) )bb)   tmpw;
+
+CREATE OR REPLACE VIEW diff.tlp_claim_convert(payment) AS
+select count(0) from (
+SELECT policyno
+FROM (
+SELECT a.policyno FROM tlp.payment a )aa
+except all
+SELECT policyno
+FROM (
+SELECT a.policyno FROM claimconvert.payment a 
+)bb)   tmpw;
+
+CREATE OR REPLACE VIEW diff.tlp_claim_convert(tcustomersa) AS
+select count(0) from (
+SELECT policyno
+FROM (
+SELECT a.policyno FROM tlp.customersa a )aa
+except all
+SELECT policyno
+FROM (
+SELECT a.policyno FROM claimconvert.customersa a 
+)bb)   tmpw;
+
+CREATE OR REPLACE VIEW diff.tlp_claim_convert(splitpremiumamount) AS
+select count(0) from (
+SELECT grouppolicyno
+FROM (
+SELECT a.grouppolicyno FROM tlp.splitpremiumamount a )aa
+except all
+SELECT grouppolicyno
+FROM (
+SELECT a.grouppolicyno FROM claimconvert.splitpremiumamount a 
+)bb)   tmpw;
+

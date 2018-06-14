@@ -1568,6 +1568,119 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE claimconvert.customerinfo (	
+	policyno text NULL,
+    certificateno text NULL,
+    age text NULL,
+    sa text NULL,
+    durationinsurance text NULL,
+	customerduration text NULL,
+	extrarate text NULL,
+	effectivedate text NULL,
+	exprieddate text NULL,
+	customerstatus text NULL,
+	informdate1 text NULL,
+	paydate1 text NULL,
+	amount1 text NULL,
+	informdate2 text NULL,
+	paydate2 text NULL,
+	amount2 text NULL,
+	deaddate text NULL,
+	address1 text NULL,
+	address2 text NULL,
+	hometel text NULL,
+	mobiletel text NULL,
+	officetel text NULL,
+	nameofbenefit2 text NULL,
+	percentofbenefitciary2 text NULL,
+	relationship2 text NULL,
+	nameofbenefit3 text NULL,
+	percentofbenefitciary3 text NULL,
+	relationship3 text NULL,
+	nameofbenefit4 text NULL,
+	percentofbenefitciary4 text NULL,
+	relationship4 text NULL,
+	loanno text NULL,
+	med text NULL,
+	nationid text NULL,
+	birthdate text NULL,
+	gender text NULL,
+	prefix text NULL,
+	nameth text NULL,
+	surnameth text NULL,
+	endorsedate text NULL,
+	customercode text NULL,
+	partnercode text NULL,
+	productcode text NULL,
+	partnername text NULL,
+	status text NULL,
+	lastpaydate  text NULL,
+	lastreceiptno text NULL,
+	mode text NULL,
+	lastpayperiod text NULL,
+	productname text NULL,
+	accountno text NULL,
+	creditcardno text NULL,
+	expiredcreditcard text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE claimconvert.customersa (	
+	customercode text NULL,
+	policyno text NULL,
+	sa_life text NULL,
+	sa_adb text NULL,
+	sa_tpd text NULL,
+	sa_td text NULL,
+	sa_add text NULL,
+	sa_me text NULL,
+	sa_ha text NULL,
+	sa_hb text NULL,
+	sa_ma text NULL,
+	sa_mc text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE claimconvert.splitpremiumamount (	
+	grouppolicyno text NULL,
+	customercode text NULL,
+	lifepremium text NULL,
+	tpdpremium text NULL,
+	tdpremium text NULL,
+	addpremium text NULL,
+	mepremium text NULL,
+	adbpremium text NULL,
+	mapremium text NULL,
+	mcpremium text NULL,
+	hapremium text NULL,
+	hbpremium text NULL,
+	receiptno text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE claimconvert.payment(	
+	policyno text NULL,
+	productcode text NULL,
+	customercode text NULL,
+	paymentdate text NULL,
+	receiptno text NULL,
+	payperiod text NULL,
+	premiumamt text NULL,
+	collecteddate text NULL,
+	mode text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 
 CREATE TABLE lookup.migratedate (
 	policyno text NOT NULL,

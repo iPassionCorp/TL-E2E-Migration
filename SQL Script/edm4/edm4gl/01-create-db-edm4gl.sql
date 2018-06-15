@@ -1516,6 +1516,15 @@ WITH (
 	OIDS=FALSE
 ) ;	
 
+CREATE TABLE tlp.rprider(
+	receiptno text NULL,
+	receiptdetail text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;	
+
+
 CREATE TABLE tlp.masproduct (
 	productseq text NULL,
 	policyno text NULL,

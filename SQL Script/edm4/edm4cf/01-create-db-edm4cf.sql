@@ -1449,7 +1449,14 @@ CREATE TABLE tlp.customersa (
 	sa_ma text NULL,
 	expiry_ma text NULL,
 	sa_mc text NULL,
-	expiry_mc text NULL
+	expiry_mc text NULL,	
+	sa_icu text NULL,
+	sa_fideath text NULL,
+	sa_fitpd text NULL,
+	sa_lsdeath text NULL,
+	sa_lstpd text NULL,
+	sa_cb text NULL,
+	sa_cp text NULL
 )
 WITH (
 	OIDS=FALSE

@@ -13,3 +13,4 @@ select count(0) AS claimpayment from tlp.claimpayment;
 select count(0) AS claimpaymentdetail from tlp.claimpaymentdetail;
 select count(0) AS claimregisterdetail from tlp.claimregisterdetail;
 select count(0) AS claimregisterheader from tlp.claimregisterheader;
+select count(0) AS rprider from tlp.rprider;

@@ -93,6 +93,167 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+
+CREATE TABLE dm.crftemp (
+	type text NULL,
+	policyno text NULL,
+	certno text NULL,
+	transactiondate text NULL,
+	crfdate text NULL,
+	creditno text NULL,
+	partialrefund text NULL,
+	partialrefunddate text NULL,
+	cancelcode text NULL,
+	payperiod text NULL,
+	refundpremium text NULL,
+	status text NULL,
+	statusdate text NULL,
+	ownerbranch text NULL, 
+	submitbranch text NULL,
+	userid text NULL,
+	remark text NULL,
+	contacttelno text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.creditmortgate (
+	partnercode text NULL,
+	billingtype text NULL,
+	policyno text NULL,
+	cert text NULL,
+	policytype text NULL,
+	cardname text NULL,
+	cardtype text NULL,
+	merchantcode text NULL,
+	creditno text NULL,
+	relationtype text NULL,
+	ownername text NULL,
+	expiredate text NULL,
+	entrydate text NULL,
+	entrytime text NULL,
+	status text NULL,
+	statusdate text NULL,
+	userid text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.partnerbilling (
+	partnercode text NULL,
+	partnerabb text NULL,
+	billingtype text NULL,
+	billingdue text NULL,
+	billingdate text NULL,
+	startduedate text NULL,
+	lastduedate text NULL,
+	status text NULL,
+	transactiondate text NULL,
+	userid text NULL,
+	accountno text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.billingpost (
+	partnercode text NULL,
+	billingtype text NULL,
+	policyno text NULL,
+	cert text NULL,
+	policytype text NULL,
+	paystatus text NULL,
+	duedate text NULL,
+	payperiod text NULL,
+	postdate text NULL,
+	billingdate text NULL,
+	paymentdate text NULL,
+	premium text NULL,
+	mode text NULL,
+	status text NULL,
+	statusdate text NULL,
+	attemp text NULL,
+	attempdate text NULL,
+	marchantcode text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.consumerhist (
+	partnercode text NULL,
+	billingtype text NULL,
+	policyno text NULL,
+	cert text NULL,
+	policytype text NULL,
+	seqno text NULL,
+	marchantcode text NULL,
+	paystatus text NULL,
+	duedate text NULL,
+	payperiod text NULL,
+	sysdate text NULL,
+	creditno text NULL,
+	ownername text NULL,
+	expiredate text NULL,
+	approvalcode text NULL,
+	billingdate text NULL,
+	paymentdate text NULL,
+	premium text NULL,
+	mode text NULL,
+	status text NULL,
+	statusdate text NULL,
+	responsecode text NULL,
+	responsedate text NULL,
+	attemp text NULL,
+	rpno text NULL,
+	submitno text NULL,
+	userid  text NULL,
+	exfileout text NULL,
+	exfilereturn text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.downplan (
+	policyno text NULL,
+	certno text NULL,
+	oldpackage text NULL,
+	newpackage text NULL,
+	payperiod text NULL,
+	newpremium text NULL,
+	userid text NULL,
+	transactiondate text NULL,
+	status text NULL,
+	statusdate text NULL,
+	endorsedate text NULL,
+	paydate text NULL,
+	requestdate text NULL,
+	duedate text NULL,
+	oldpremium text NULL,
+	submitbranch text NULL,
+	remark text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.downplandetail (
+	policyno text NULL,
+	certno text NULL,
+	ridertype text NULL,
+	oldsum text NULL,
+	newsum text NULL,
+	oldpremium text NULL,
+	newpremium text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
 CREATE EXTENSION dblink;
 
 CREATE VIEW tlp.customerinfo AS

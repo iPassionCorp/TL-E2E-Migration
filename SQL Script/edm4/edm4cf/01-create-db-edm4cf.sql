@@ -1743,6 +1743,10 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE OR REPLACE VIEW lookup.tlpppi as
+select tlpplancode from lookup.smi
+where coverage = 'LIFE' and benefit = 0;
+
 CREATE OR REPLACE VIEW diff.tlp_claim_convert_custinfo AS
 select tlp.policyno, tlp.tlp, cc.claim_convert, tlp.tlp - cc.claim_convert as diff
 from

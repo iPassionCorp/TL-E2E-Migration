@@ -134,3 +134,7 @@ prefix text, sanew text, expdatenew text, cashexpire text, cashimmediate text, b
 tescopredic text, sendstatus text, sendgiftdate text, userconfirm text, registermailtesco text, receivetescodate text, receivetescostatus text, 
 receivetescoreason text, uploadxo text, extrarate text, effectivedateold text, matdateold text, expdateold text, issuedageold text, cv text, 
 cvdate text, status2 text, statusdate2 text, customercode text);
+
+CREATE OR REPLACE VIEW tlp.tlppolicystatus AS
+ SELECT t1.customerstatus
+   FROM dblink('dbname=edm4cf options=-csearch_path='::text, 'select customerstatus from lookup.tlppolicystatus'::text) t1(customerstatus text);

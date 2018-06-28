@@ -6,8 +6,11 @@ CREATE DATABASE edm4billing
     LC_CTYPE   = 'th_TH.UTF8';*/
 
 DROP SCHEMA IF EXISTS tlpbilling CASCADE;
+DROP SCHEMA IF EXISTS dm CASCADE;
+
 
 CREATE SCHEMA tlpbilling;
+CREATE SCHEMA dm;
 
 CREATE TABLE tlpbilling.membermaster (
 	policyno text NULL,

@@ -15,6 +15,27 @@ CREATE SCHEMA dm;
 CREATE SCHEMA tlitext;
 CREATE SCHEMA lookup;
 
+CREATE TABLE dm.compensateid (
+	compensateid text NULL,
+	referenceid text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.customer (
+	customerid text NULL,
+	referenceid text NULL,
+	referencetype text NULL,
+	birthdate text NULL,
+	sex text NULL,
+	contactnameid text NULL,
+	contactaddressid text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 CREATE TABLE dm.beneficiary 
 (
 	policytype text,

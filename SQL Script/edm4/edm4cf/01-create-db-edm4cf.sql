@@ -169,7 +169,8 @@ CREATE TABLE dm.certrider (
 	extrapremium text NULL,
 	riderstatus text NULL,
 	riderstatusdate text NULL,
-	effectivedate text NULL
+	effectivedate text NULL,
+	reserve text NULL
 )
 WITH (
 	OIDS=FALSE

@@ -639,6 +639,107 @@ WITH (
 ) ;
 
 
+CREATE TABLE dm.consumerhist(
+	partnercode text NULL,	
+	billingtype text NULL,	
+	policyno text NULL,
+	cert text NULL,
+	policytype text NULL,
+	seqno text NULL,
+	merchantcode text NULL,
+	paystatus text NULL,
+	shopcode text NULL,
+	entitycode text NULL,
+	roundno text NULL,
+	duedate text NULL,
+	payperiod text NULL,
+	sysdate text NULL,
+	creditno text NULL,
+	ownername text NULL,
+	expireddate text NULL,
+	approvalcode text NULL,
+	billingdate text NULL,
+	paymentdate text NULL,
+	premium text NULL,
+	mode text NULL,
+	status text NULL,
+	statusdate text NULL,
+	responsecode text NULL,
+	responsedate text NULL,
+	attemp text NULL,
+	rpno text NULL,
+	submitno text NULL,
+	docdate text NULL,
+	docno text NULL,
+	userid text NULL,
+	exfileout text NULL,
+	exfilereturn text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.crftemp(
+	type text NULL,
+	policyno text NULL,
+	certno text NULL,
+	transactiondate text NULL,
+	crfdate text NULL,
+	creditno text NULL,
+	partialrefund text NULL,
+	partialrefunddate text NULL,
+	cancelcode text NULL,
+	payperiod text NULL,
+	refundpremium text NULL,
+	status text NULL,
+	statusdate text NULL,
+	ownerbranch text NULL,
+	submitbranch text NULL,
+	userid text NULL,
+	remark text NULL,
+	contacttelno text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+
+CREATE TABLE dm.downplan(
+	policyno text NULL,
+	certno text NULL,
+	oldpackage text NULL,
+	newpackage text NULL,
+	payperiod text NULL,
+	oldpremium text NULL,
+	newpremium text NULL,
+	userid text NULL,
+	transactiondate  text NULL,
+	status text NULL,
+	statusdate text NULL,
+	endorsedate text NULL,
+	paydate text NULL,
+	requestdate text NULL,
+	duedate text NULL,
+	submitbranch text NULL,
+	remark text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.downplandetail(
+	policyno text NULL,
+	certno text NULL,
+	ridertype text NULL,
+	oldsum text NULL,
+	newsum text NULL,
+	oldpremium text NULL,
+	newpremium text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 CREATE TABLE tlitext.beneficiary 
 (
 	policytype text,

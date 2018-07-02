@@ -1983,6 +1983,19 @@ WITH (
 	OIDS=FALSE
 ) ;
 
+CREATE TABLE lookup.partnermapping (
+	partner text NULL,
+	policyno text NULL
+) ;
+
+CREATE TABLE lookup.billingmapping (
+	partner text NULL,
+	partnercode text NULL,
+	billingtype text NULL,
+	tlpplncode text NULL,
+	merchantcode text NULL
+) ;
+
 CREATE TABLE tlitext.orctrl3333 (
 	rpno text NULL,
 	policyno text NULL,

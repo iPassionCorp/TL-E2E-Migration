@@ -193,6 +193,7 @@ CREATE TABLE dm.clrctrl (
 	certno text NULL,
 	effectivedate text NULL, 
 	payperiod text NULL,
+	duedate text NULL,
 	paydate text NULL,
 	premium text NULL,
 	extraprem text NULL,
@@ -209,7 +210,6 @@ CREATE TABLE dm.clrctrl (
 	userid text NULL,
 	reasoncode text NULL,
 	moneyok text NULL
-
 
 )
 WITH (

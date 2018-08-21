@@ -1328,22 +1328,6 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE lookup.planmapping (
-	tlpplancode varchar(8) NOT NULL,
-	tlipolicy varchar(4) NOT NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE lookup.policymapping (
-	tlpplancode text NOT NULL,
-	tlipolicy text NOT NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
 CREATE TABLE lookup.smi (
 	tlpplancode varchar(8) NOT NULL,
 	tlipolicy varchar(4) NOT NULL,

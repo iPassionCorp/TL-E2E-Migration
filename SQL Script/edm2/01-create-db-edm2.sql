@@ -1380,16 +1380,11 @@ CREATE TABLE tlp.customerinfo (
 	informdate2 text NULL,
 	paydate2 text NULL,
 	amount2 text NULL,
-	deaddate text NULL,
-	lastpaydate text NULL,
-	lastreceiptno text NULL,
-	mode text NULL,
-	lastpayperiod text NULL
+	deaddate text NULL
 )
 WITH (
 	OIDS=FALSE
 ) ;
-
 
 CREATE TABLE tlp.customersa (
 	customercode text NULL,
@@ -1426,20 +1421,11 @@ CREATE TABLE tlp.customersa (
 	sa_ma text NULL,
 	expiry_ma text NULL,
 	sa_mc text NULL,
-	expiry_mc text NULL,
-	sa_icu text NULL,
-	sa_fideath text NULL,
-	sa_fitpd text NULL,
-	sa_lsdeath text NULL,
-	sa_lstpd text NULL,
-	sa_cb text NULL,
-	sa_cp text NULL
+	expiry_mc text NULL
 )
 WITH (
 	OIDS=FALSE
 ) ;
-
-
 
 CREATE TABLE tlp.masproduct (
 	productseq text NULL,
@@ -1489,16 +1475,6 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-
-CREATE TABLE tlp.masrisktype (
-	risktypeseq text NULL,
-	risktypename text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-
 CREATE TABLE tlp.payment (
 	partnercode text NULL,
 	policyno text NULL,
@@ -1518,17 +1494,13 @@ CREATE TABLE tlp.payment (
 	monthenddate text NULL,
 	pay_date text NULL,
 	refund_amount text NULL,
-	collecteddate text NULL,
-	mode text NULL,
-	payperiod text NULL,
-	receiptno text NULL
+	collecteddate text NULL
 )
 WITH (
 	OIDS=FALSE
 ) ;
 
-
-CCREATE TABLE tlp.splitpremiumamount (
+CREATE TABLE tlp.splitpremiumamount (
 	productid text NULL,
 	grouppolicyno text NULL,
 	customercode text NULL,
@@ -1548,21 +1520,12 @@ CCREATE TABLE tlp.splitpremiumamount (
 	hbpremium text NULL,
 	hapremium text NULL,
 	hspremium text NULL,
-	icupremium text NULL,
-	cipremium text NULL,
-	fi_deathlum text NULL,
-	fi_tpdpremium text NULL,
-	ls_deathpremium text NULL,
-	ls_tpdpremium text NULL,
 	ddpremium text NULL,
-	lifetpdpremium text NULL,
-	duedate text NULL,
-	receiptno text NULL
+	lifetpdpremium text NULL
 )
 WITH (
 	OIDS=FALSE
 ) ;
-
 
 CREATE TABLE tli.cert (
 	policyno varchar(4) NOT NULL,

@@ -1,0 +1,12 @@
+select count(0) AS customerinfo from tlp.customerinfo;
+select count(0) AS customersa from tlp.customersa;
+select count(0) AS customerballoon from tlp.customerballoon;
+select count(0) AS splitpremiumamount from tlp.splitpremiumamount;
+select count(0) AS payment from tlp.payment;
+select count(0) AS masproduct from tlp.masproduct;
+select count(0) AS masproductcoverage from tlp.masproductcoverage;
+select count(0) AS masproductcoverageclaim from tlp.masproductcoverageclaim;
+select count(0) AS claimpayment from tlp.claimpayment;
+select count(0) AS claimpaymentdetail from tlp.claimpaymentdetail;
+select count(0) AS claimregisterdetail from tlp.claimregisterdetail;
+select count(0) AS claimregisterheader from tlp.claimregisterheader;

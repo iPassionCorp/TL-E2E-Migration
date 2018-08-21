@@ -77,60 +77,6 @@ WITH (
 	OIDS=FALSE
 ) ;
 
-CREATE TABLE dm.cert (
-	policyno text NULL,
-	certno text NULL,
-	appno text NULL,
-	reqdate text NULL,
-	nameid text NULL,
-	age text NULL,
-	smi text NULL,
-	lifesum text NULL,
-	accidentsum text NULL,
-	period text NULL,
-	loan_term text NULL,
-	lifepremium text NULL,
-	extrapremium text NULL,
-	tpdpremium text NULL,
-	extratpdpremium text NULL,
-	addpremium text NULL,
-	em text NULL,
-	tpd text NULL,
-	effectivedate text NULL,
-	maturedate text NULL,
-	premiumdate text NULL,
-	certyyyymm text NULL,
-	statcer text NULL,
-	statcer2 text NULL,
-	statdate2 text NULL,
-	informdate1 text NULL,
-	paydate1 text NULL,
-	amount1 text NULL,
-	informdate2 text NULL,
-	paydate2 text NULL,
-	amount2 text NULL,
-	deaddate text NULL,
-	endownmentyear text NULL,
-	deadcause text NULL,
-	receiptflag text NULL,
-	referenceno text NULL,
-	reserve text NULL,
-	mode text NULL,
-	payperiod text NULL,
-	rpno text NULL,
-	statdate1 text NULL,
-	oldstatcert1 text NULL,
-	oldstatcert2 text NULL,
-	oldstatcertdate1 text NULL,
-	oldstatcertdate2 text NULL,
-	package text NULL,
-	duedate text NULL,
-	familytype text NULL	
-)
-WITH (
-	OIDS=FALSE
-) ;
-
 CREATE TABLE dm.detcert (
 	policyno text NULL,
 	certno text NULL,

@@ -1404,14 +1404,6 @@ CREATE TABLE lookup.partnermapping (
 	policyno text NULL
 ) ;
 
-CREATE TABLE lookup.billingmapping (
-	partner text NULL,
-	partnercode text NULL,
-	billingtype text NULL,
-	tlpplncode text NULL,
-	merchantcode text NULL
-) ;
-
 CREATE OR REPLACE VIEW lookup.tlpppi as
 select tlpplancode from lookup.smi
 where coverage = 'LIFE' and benefit = 0;

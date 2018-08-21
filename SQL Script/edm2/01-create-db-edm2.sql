@@ -378,6 +378,22 @@ CREATE TABLE dm.queue(
 WITH (
 	OIDS=FALSE
 ) ;
+CREATE TABLE dm.tlpmigration (
+ customercode text NULL,
+ tlppolicyno text NULL,
+ tlpcertno text NULL,
+ tlpplanno text NULL,
+ tlpproductname text NULL,
+ tlipolicyno text NULL,
+ migrateplancode text NULL,
+ migrateplanno text NULL,
+ tmoplancode text NULL,
+ tmoplanno text NULL,
+ family text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
 CREATE TABLE tlitext.compensateid (
 	compensateid text NULL,
 	referenceid text NULL
@@ -1402,6 +1418,14 @@ WITH (
 CREATE TABLE lookup.partnermapping (
 	partner text NULL,
 	policyno text NULL
+) ;
+
+CREATE TABLE lookup.billingmapping (
+	partner text NULL,
+	partnercode text NULL,
+	billingtype text NULL,
+	tlpplncode text NULL,
+	merchantcode text NULL
 ) ;
 
 CREATE OR REPLACE VIEW lookup.tlpppi as

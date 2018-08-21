@@ -10,8 +10,6 @@ truncate table tlitext.certlinker;
 truncate table tlitext.certmapping;
 truncate table tlitext.mgclaim;
 truncate table tlitext.mgorder;
-truncate table tlitext.mgpay;
-truncate table tlitext.mgpayrider;
 truncate table tlitext.mghis;
 truncate table tlitext.mginsmemo;
 truncate table tlitext.mginterest;

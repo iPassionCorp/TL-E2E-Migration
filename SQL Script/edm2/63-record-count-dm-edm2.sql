@@ -13,8 +13,4 @@ select count(0) AS mgorder from dm.mgorder;
 select count(0) AS mghis from dm.mghis;
 select count(0) AS mginsmemo from dm.mginsmemo;
 select count(0) AS mginterest from dm.mginterest;
-select count(0) AS mgpay from dm.mgpay;
-select count(0) AS mgpayrider from dm.mgpayrider;
 select count(0) AS mgreceiver from dm.mgreceiver;
-select count(0) AS premrate from dm.premrate;
-select count(0) AS tpdrate from dm.tpdrate;

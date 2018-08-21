@@ -13,6 +13,4 @@ select count(0) AS mgorder from tlitext.mgorder;
 select count(0) AS mghis from tlitext.mghis;
 select count(0) AS mginsmemo from tlitext.mginsmemo;
 select count(0) AS mginterest from tlitext.mginterest;
-select count(0) AS mgpay from tlitext.mgpay;
-select count(0) AS mgpayrider from tlitext.mgpayrider;
 select count(0) AS mgreceiver from tlitext.mgreceiver;

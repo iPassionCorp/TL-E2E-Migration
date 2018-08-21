@@ -10,8 +10,6 @@ truncate table dm.certlinker;
 truncate table dm.certmapping;
 truncate table dm.mgclaim;
 truncate table dm.mgorder;
-truncate table dm.mgpay;
-truncate table dm.mgpayrider;
 truncate table dm.mghis;
 truncate table dm.mginsmemo;
 truncate table dm.mginterest;

@@ -1,3 +1,13 @@
+DELETE from lookup.tlppolicystatus;
+
+INSERT INTO lookup.tlppolicystatus (customerstatus) VALUES 
+('Surrender')
+,('Expired')
+,('Cancel (Void)')
+,('Active')
+,('Death')
+;
+
 delete from lookup.smi;
 
 insert into lookup.smi values('00029006','LE53','LIFE','LE53','100.00');

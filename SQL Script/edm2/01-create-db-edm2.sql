@@ -382,6 +382,67 @@ CREATE TABLE dm.queue(
 WITH (
 	OIDS=FALSE
 ) ;
+
+CREATE TABLE dm.mgpay (
+	certno text NULL,
+	receivedate text NULL,
+	accidentdate text NULL,
+	sectioncode text NULL,
+	orderno text NULL,
+	policystatus text NULL,
+	policystatusdate text NULL,
+	policystatus2 text NULL,
+	policystatusdate2 text NULL,
+	branchcode text NULL,
+	servicebranch text NULL,
+	claimtype text NULL,
+	paytype text NULL,
+	proofinsuredage text NULL,
+	disabilitytype text NULL,
+	disnumber text NULL,
+	payrate text NULL,
+	payamount text NULL,
+	accdamount text NULL,
+	surrenderamount text NULL,
+	returnamount text NULL,
+	deductamount text NULL,
+	claimokdate text NULL,
+	claimpaydate text NULL,
+	allowtype text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE dm.mgpayrider (
+	certno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	sectioncode text NULL,
+	orderno text NULL,
+	policystatus text NULL,
+	policystatusdate text NULL,
+	policystatus2 text NULL,
+	policystatusdate2 text NULL,
+	branchcode text NULL,
+	servicebranch text NULL,
+	amestartdate text NULL,
+	ameday text NULL,
+	ameexpense text NULL,
+	amepayment text NULL,
+	tdday text NULL,
+	tdstartdate text NULL,
+	tdpayment text NULL,
+	returnamount text NULL,
+	deductamount text NULL,
+	voiddate text NULL,
+	claimokdate text NULL,
+	claimpaydate text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
 CREATE TABLE dm.tlpmigration (
  customercode text NULL,
  tlppolicyno text NULL,
@@ -757,6 +818,66 @@ CREATE TABLE tlitext.queue(
 	firstxconsiderid text NULL,
 	firstofferdate text NULL
 
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.mgpay (
+	certno text NULL,
+	receivedate text NULL,
+	accidentdate text NULL,
+	sectioncode text NULL,
+	orderno text NULL,
+	policystatus text NULL,
+	policystatusdate text NULL,
+	policystatus2 text NULL,
+	policystatusdate2 text NULL,
+	branchcode text NULL,
+	servicebranch text NULL,
+	claimtype text NULL,
+	paytype text NULL,
+	proofinsuredage text NULL,
+	disabilitytype text NULL,
+	disnumber text NULL,
+	payrate text NULL,
+	payamount text NULL,
+	accdamount text NULL,
+	surrenderamount text NULL,
+	returnamount text NULL,
+	deductamount text NULL,
+	claimokdate text NULL,
+	claimpaydate text NULL,
+	allowtype text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.mgpayrider (
+	certno text NULL,
+	accidentdate text NULL,
+	receivedate text NULL,
+	sectioncode text NULL,
+	orderno text NULL,
+	policystatus text NULL,
+	policystatusdate text NULL,
+	policystatus2 text NULL,
+	policystatusdate2 text NULL,
+	branchcode text NULL,
+	servicebranch text NULL,
+	amestartdate text NULL,
+	ameday text NULL,
+	ameexpense text NULL,
+	amepayment text NULL,
+	tdday text NULL,
+	tdstartdate text NULL,
+	tdpayment text NULL,
+	returnamount text NULL,
+	deductamount text NULL,
+	voiddate text NULL,
+	claimokdate text NULL,
+	claimpaydate text NULL
 )
 WITH (
 	OIDS=FALSE

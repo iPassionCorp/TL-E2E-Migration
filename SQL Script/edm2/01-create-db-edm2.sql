@@ -236,49 +236,6 @@ CREATE TABLE dm.mgorder (
 WITH (
 	OIDS=FALSE
 ) ;
-CREATE TABLE dm.mgcfpolicy (
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
-	sectioncode text NULL,
-	orderno text NULL,
-	policystatus text NULL,
-	policystatusdate text NULL,
-	policystatus2 text NULL,
-	policystatusdate2 text NULL,
-	branchcode text NULL,
-	servicebranch text NULL,
-	proofinsuredage text NULL,
-	claimokdate text NULL,
-	claimpaydate text NULL,
-	surrenderamount text NULL,
-	returnamount text NULL,
-	deductamount text NULL,
-	voiddate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE dm.mgcfpay (
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
-	ridertype text NULL,
-	period text NULL,
-	disnumber text NULL,
-	payrate text NULL,
-	organ text NULL,
-	payamount text NULL,
-	ridersum text NULL,
-	expense text NULL,
-	days text NULL,
-	startdate text NULL
-
-)
-WITH (
-	OIDS=FALSE
-) ;
 
 CREATE TABLE dm.mghis (
 	certno text NULL,
@@ -459,6 +416,8 @@ CREATE TABLE dm.tlpmigration (
 WITH (
 	OIDS=FALSE
 ) ;
+
+
 CREATE TABLE tlitext.compensateid (
 	compensateid text NULL,
 	referenceid text NULL
@@ -676,49 +635,6 @@ CREATE TABLE tlitext.mgorder (
 WITH (
 	OIDS=FALSE
 ) ;
-CREATE TABLE tlitext.mgcfpolicy (
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
-	sectioncode text NULL,
-	orderno text NULL,
-	policystatus text NULL,
-	policystatusdate text NULL,
-	policystatus2 text NULL,
-	policystatusdate2 text NULL,
-	branchcode text NULL,
-	servicebranch text NULL,
-	proofinsuredage text NULL,
-	claimokdate text NULL,
-	claimpaydate text NULL,
-	surrenderamount text NULL,
-	returnamount text NULL,
-	deductamount text NULL,
-	voiddate text NULL
-)
-WITH (
-	OIDS=FALSE
-) ;
-
-CREATE TABLE tlitext.mgcfpay (
-	certno text NULL,
-	accidentdate text NULL,
-	receivedate text NULL,
-	ridertype text NULL,
-	period text NULL,
-	disnumber text NULL,
-	payrate text NULL,
-	organ text NULL,
-	payamount text NULL,
-	ridersum text NULL,
-	expense text NULL,
-	days text NULL,
-	startdate text NULL
-
-)
-WITH (
-	OIDS=FALSE
-) ;
 
 CREATE TABLE tlitext.mghis (
 	certno text NULL,
@@ -878,6 +794,23 @@ CREATE TABLE tlitext.mgpayrider (
 	voiddate text NULL,
 	claimokdate text NULL,
 	claimpaydate text NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+
+CREATE TABLE tlitext.tlpmigration (
+ customercode text NULL,
+ tlppolicyno text NULL,
+ tlpcertno text NULL,
+ tlpplanno text NULL,
+ tlpproductname text NULL,
+ tlipolicyno text NULL,
+ migrateplancode text NULL,
+ migrateplanno text NULL,
+ tmoplancode text NULL,
+ tmoplanno text NULL,
+ family text NULL
 )
 WITH (
 	OIDS=FALSE

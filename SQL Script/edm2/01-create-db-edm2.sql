@@ -71,11 +71,15 @@ CREATE TABLE dm.policy (
 	"name" text NULL,
 	"type" text NULL,
 	effectivedate text NULL,
-	planname text NULL
+	planname text NULL,
+	riderplan text NULL,
+	tlbranch text NULL
 )
 WITH (
 	OIDS=FALSE
 ) ;
+
+
 CREATE TABLE dm.cert (
 	policyno text NULL,
 	certno text NULL,
@@ -440,13 +444,16 @@ CREATE TABLE tlitext.person (
 WITH (
 	OIDS=FALSE
 ) ;
+
 CREATE TABLE tlitext.policy (
 	policycode text NULL,
 	rate text NULL,
 	"name" text NULL,
 	"type" text NULL,
 	effectivedate text NULL,
-	planname text NULL
+	planname text NULL,
+	riderplan text NULL,
+	tlbranch text NULL
 )
 WITH (
 	OIDS=FALSE
@@ -1131,14 +1138,7 @@ CREATE TABLE tlp.customersa (
 	sa_ma text NULL,
 	expiry_ma text NULL,
 	sa_mc text NULL,
-	expiry_mc text NULL,	
-	sa_icu text NULL,
-	sa_fideath text NULL,
-	sa_fitpd text NULL,
-	sa_lsdeath text NULL,
-	sa_lstpd text NULL,
-	sa_cb text NULL,
-	sa_cp text NULL
+	expiry_mc text NULL
 )
 WITH (
 	OIDS=FALSE
